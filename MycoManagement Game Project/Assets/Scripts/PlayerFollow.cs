@@ -8,7 +8,7 @@ public class PlayerFollow : MonoBehaviour
 
     public Vector3 _cameraOffset;
     public bool LookAtPlayer = false; //camera moves around the player.
-    public bool RotateAroundPlayer = true; //switches on rotation around the Y Axis around the player using the X Axis of the mouse.
+    public bool RotateAroundPlayer = false; //switches on rotation around the Y Axis around the player using the X Axis of the mouse.
     public float RotSpeed = 10f; //speed of rotation around player
    
 
