@@ -35,7 +35,7 @@ public class GillExtraction : MonoBehaviour
         numCuts++;
         Debug.Log("Number of cuts: " + numCuts);
 
-        if(numCuts >= 4)
+        if(numCuts >= cutPoints.Length)
         {
             Debug.Log("They all got cut mufu");
             gills.transform.parent = null;
