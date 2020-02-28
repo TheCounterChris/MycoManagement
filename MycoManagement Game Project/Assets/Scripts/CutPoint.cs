@@ -6,6 +6,8 @@ public class CutPoint : MonoBehaviour
 {
     bool beenCut = false;
 
+    Renderer mr;
+
     // private void OnMouseDown() 
     // {
     //     Debug.Log("clicked");
@@ -16,6 +18,12 @@ public class CutPoint : MonoBehaviour
     //         this.transform.parent.gameObject.GetComponent<GillExtraction>().UpdateCut();
     //     }
     // }
+
+    private void Start() 
+    {
+        mr = GetComponent<MeshRenderer>();
+        mr.material.color = Color.red;
+    }
 
     private void OnMouseOver()
     {
@@ -28,6 +36,8 @@ public class CutPoint : MonoBehaviour
                 Debug.Log("CUT");
                 beenCut = true;
                 this.transform.parent.gameObject.GetComponent<GillExtraction>().UpdateCut();
+
+                mr.material.color = Color.blue;
             }
         }        
     }
