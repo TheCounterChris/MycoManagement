@@ -39,7 +39,7 @@ public class GillExtraction : MonoBehaviour
 
             gills.transform.position = tablePlace.transform.position;//move the gills to the table
             gills.transform.Rotate(90f, 0f, 0f, Space.World);//turn the gills right side up
-            //gills.AddComponent<Rigidbody>();
+            gills.AddComponent<Rigidbody>();//give the gills rigidbody properties
         }
     }
 }//class
