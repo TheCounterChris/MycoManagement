@@ -2,51 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//THIS SCRIPT GOES ON THE MUSHROOM OBJECT
 public class GillExtraction : MonoBehaviour
 {
-    public GameObject gills;
-    Quaternion gillsRotation;
-    public GameObject[] cutPoints = new GameObject[8];
-    public GameObject tablePlace;
+    public GameObject gills;//gills model
+    public GameObject[] cutPoints = new GameObject[8];//list of the points you have to cut
+    //public GameObject tablePlace;//where the gills go after they are cut off of the mushroom
 
-    Transform trashCan;
+    Transform trashCan;//trashcan, where the mushroom goes after gills are removed
+    Transform tablePlace;//table place, where the gills go after they are cut off of the mushroom
 
-    int numCuts = 0;
+    int numCuts = 0;//how many points have been cut
 
     // Start is called before the first frame update
     void Start()
     {
-        trashCan = GameObject.Find("Trashcan").transform;
-        gillsRotation = gills.transform.rotation;
+        trashCan = GameObject.Find("Trashcan").transform;//find the trashcan
+        tablePlace = GameObject.Find("TablePlace").transform;//find the table place
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // if(numCuts >= 4)
-        // {
-        //     Debug.Log("They all got cut yo");
-        //     gills.transform.parent = null;
-        // }
-    }
 
-    public void UpdateCut()
+    public void UpdateCut()//what to do when one point is cut
     {
-        numCuts++;
-        Debug.Log("Number of cuts: " + numCuts);
+        numCuts++;//increase number of points cut by one
+        Debug.Log("Number of cuts: " + numCuts);//print
 
-        if(numCuts >= cutPoints.Length)
+        if(numCuts >= cutPoints.Length)//if all of the points are cut
         {
-            Debug.Log("They all got cut mufu");
-            gills.transform.parent = null;
+            Debug.Log("They all got cut");//print
+            gills.transform.parent = null;//remove the gills from the mushroom
             
-            gameObject.transform.position = trashCan.position;
-            gameObject.transform.parent = null;
-            this.GetComponent<Rigidbody>().useGravity = true;
-            this.GetComponent<RotateObject>().enabled = false;
+            gameObject.transform.position = trashCan.position;//put the mushroom in the trashcan
+            gameObject.transform.parent = null;//release the mushroom from the robot's hold
+            this.GetComponent<Rigidbody>().useGravity = true;//turn on gravity for the mushroom
+            this.GetComponent<RotateObject>().enabled = false;//turn of the rotation script
 
-            gills.transform.position = tablePlace.transform.position;
-            gills.transform.rotation = gillsRotation;
+            gills.transform.position = tablePlace.transform.position;//move the gills to the table
+            gills.transform.Rotate(90f, 0f, 0f, Space.World);//turn the gills right side up
             //gills.AddComponent<Rigidbody>();
         }
     }
