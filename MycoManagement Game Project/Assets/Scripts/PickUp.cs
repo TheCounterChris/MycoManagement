@@ -13,7 +13,10 @@ public class PickUp : MonoBehaviour
     void Start()
     {
         hand = GameObject.Find("Hand").transform;
-        firstPersHoldPos = GameObject.Find("FirstPersHoldPos").transform;        
+        Debug.Log("HAND: " + hand);
+
+        firstPersHoldPos = GameObject.Find("FirstPersHoldPos").transform;
+        Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);       
     }
 
     void Update()
@@ -35,7 +38,7 @@ public class PickUp : MonoBehaviour
             if(colliding == true)//something to pick up
             {
                 Debug.Log("No held item and in position to pick up");
-                if(Input.GetKeyDown("e"))//get input key
+                if(Input.GetButtonDown("Pick Up"))//get input key
                 {
                     Debug.Log("Pressed button to pick up object");
                     PickUpObject();//pick up the object
@@ -43,7 +46,7 @@ public class PickUp : MonoBehaviour
             }
             else//not in position to pick up
             {
-                if(Input.GetKeyDown("e"))//get input key
+                if(Input.GetButtonDown("Pick Up"))//get input key
                 {
                     Debug.Log("Pressed button to pick up object, but not in position to pick up object");
                 }
@@ -51,7 +54,7 @@ public class PickUp : MonoBehaviour
         }
         else if(pickedUp == true)//already holding something
         {
-            if(Input.GetKeyDown("q"))//input to put down object
+            if(Input.GetButtonDown("Put Down"))//input to put down object
             {
                 Debug.Log("Pressed button to put down object");
                 PutDownObject();//put down object
@@ -59,7 +62,7 @@ public class PickUp : MonoBehaviour
         }
         else//if something went wrong
         {
-            if(Input.GetKeyDown("q"))
+            if(Input.GetButtonDown("Put Down"))
             {
                 Debug.Log("There is no held item");
             }
