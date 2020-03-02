@@ -5,12 +5,11 @@ using UnityEngine;
 public class SubstrateToIncubator : MonoBehaviour
 
 {
-
     MushroomManager shroom;
-
     string shroomName;
 
-    void Start() {
+    void Start()
+    {
         shroom = FindObjectOfType<MushroomManager>();
     }
 
@@ -18,9 +17,16 @@ public class SubstrateToIncubator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Fungi"))
         {
-            Debug.Log("collision detected");
             shroomName = other.name;
             shroom.AddMushroom(shroomName);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Fungi"))
+        {
+            shroom.RemoveMushroom(shroomName);
         }
     }
 }
