@@ -8,13 +8,39 @@ public class SingleDishManager : MonoBehaviour
     GameObject fullDish;//filled petri dish
     GameObject grownDish;//petri dish with mycelium grown
 
-    GameObject gills;// gills
+    float timer;
+    bool timerUp;
+    bool grown = false;
 
     void Start() 
     {
         emptyDish = gameObject.transform.GetChild(0).gameObject;
         fullDish = gameObject.transform.GetChild(1).gameObject;
         grownDish = gameObject.transform.GetChild(2).gameObject;
+    }
+
+    void Update()
+    {
+        if(gameObject.transform.parent.tag == "Slot")
+        {
+            timer += Time.deltaTime;
+        }
+
+        if(timer >= 5)
+        {
+            timerUp = true;
+        }
+
+        if(timerUp == true)
+        {
+            if(grown == false)
+            {
+                timer = 0;
+                //this.transform.parent = null;
+                GrowDish();
+                grown = true;
+            }            
+        }
     }
 
     public void fillDish()//put the gills in the dish
