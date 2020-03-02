@@ -38,7 +38,7 @@ public class CharController : MonoBehaviour
 
         }
     }
-    
+
     void Move()
     {
         Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -53,8 +53,8 @@ public class CharController : MonoBehaviour
             transform.position += upMovement;
             velocity = moveSpeed * Mathf.Clamp(Mathf.Max(Mathf.Abs(heading.x), Mathf.Abs(heading.z)), 0f, 0.7f);
         }
-        // Debug.Log("velocity" + velocity);
-        // pdPatch.SendFloat("velocity", Mathf.Clamp(velocity, 0, 1));
+        Debug.Log("velocity" + velocity);
+        pdPatch.SendFloat("velocity", Mathf.Clamp(velocity, 0, 1));
     }
 }
 

@@ -49,8 +49,8 @@ public class BotWobble: MonoBehaviour
         timer = Time.time + wobbleTime;
         Vector3 wobbleVector = originalRotation+ new Vector3(wobbleRange, 0, 0);
         transform.localRotation = Quaternion.Euler(wobbleVector);
-        Debug.Log("New Rotation" + wobbleVector);
-        Debug.Log("timer " + timer);
+        // Debug.Log("New Rotation" + wobbleVector);
+        // Debug.Log("timer " + timer);
     }
 
 }
