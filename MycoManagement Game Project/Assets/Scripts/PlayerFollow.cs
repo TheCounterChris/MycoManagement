@@ -18,7 +18,9 @@ public class PlayerFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       _cameraOffset = transform.position - PlayerTransform.position;
+    //    _cameraOffset = transform.position - PlayerTransform.position;
+           _cameraOffset = PlayerTransform.position;
+
     }
 
     // Update is called once per frame
