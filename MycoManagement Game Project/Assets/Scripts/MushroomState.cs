@@ -5,7 +5,7 @@ public class MushroomState
 
     public string Name;
     
-    public float growthRate = 100f;
+    public float mushgrowth;
 
     public MushroomStage stage = MushroomStage.spore;
 

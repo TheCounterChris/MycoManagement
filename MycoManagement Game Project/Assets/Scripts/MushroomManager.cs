@@ -14,7 +14,7 @@ public class MushroomManager : MonoBehaviour
     float thresh = 1.05f;
     public float potency = 1f;
 
-    float mushGrowth;
+    float mushGrowthHolder;
 
     public int stage;
 
@@ -27,22 +27,23 @@ public class MushroomManager : MonoBehaviour
         {
             foreach (MushroomState m in mushArray)
             {
-                growthModifer = Mathf.Clamp((incubatorTemperature / 25f), .25f, 4f);
 
+                growthModifer = Mathf.Clamp((incubatorTemperature / 25f), .25f, 4f);
 
                 if (growthModifer > thresh)
                 {
                     potency -= 0.0001f;
+                    potency = Mathf.Clamp(potency, 0.1f, 1f);
                 }
 
-                mushGrowth = ((Time.time - m.startTime) * growthModifer);
+                mushGrowthHolder = ((Time.time - m.startTime) * growthModifer);
 
 
                 // Sets thresholds for growth stages
-                StageThresh(mushGrowth, 10f, 25f, 50f, 75f, 100f);
+                int stage = StageThresh(mushGrowthHolder, 10f, 25f, 50f, 75f, 100f);
 
 
-                // Debug.Log("Mushroom Growth: " + mushGrowth);
+                // Debug.Log("Mushroom Growth: " + mushGrowthHolder);
                 // Debug.Log("Potency: " + potency);
 
                 // stage = Mathf.Clamp(stage, 0, 5);
@@ -76,7 +77,36 @@ public class MushroomManager : MonoBehaviour
 
     }
 
-    public void StageThresh(float mushGrowth, float a, float b, float c, float d, float e)
+
+    public void AddMushroom(string name)
+    {
+        MushroomState myMushroom = new MushroomState();
+        myMushroom.startTime = Time.time;
+        myMushroom.Name = name;
+        myMushroom.mushgrowth = mushGrowthHolder;
+        Debug.Log("Mushroom Registered");
+        Debug.Log("Name " + name);
+        Debug.Log("MushGrowth " + myMushroom.mushgrowth);
+        mushrooms.Add(myMushroom);
+        mushArray = mushrooms.ToArray(); // Every time you add or delete something from the list, you MUSH call this line and Remove(myMushroom)
+    }
+
+    public void RemoveMushroom(string name)
+    {
+        foreach (MushroomState m in mushrooms)
+        {
+            if (m.Name == name)
+            {
+                mushrooms.Remove(m);
+                Debug.Log("Stage: " + m.stage);
+                Debug.Log("Points: " + potency * mushGrowthHolder);
+                break;
+            }
+        }
+    }
+
+
+    public int StageThresh(float mushGrowth, float a, float b, float c, float d, float e)
     {
         if (mushGrowth >= e)
         {
@@ -110,32 +140,10 @@ public class MushroomManager : MonoBehaviour
 
         nextStage = stage + 1;
 
+        return stage;
+
         // Debug.Log("Stage "+ stage);
         // Debug.Log("Next Stage " + nextStage);
-    }
-
-    public void AddMushroom(string name)
-    {
-        MushroomState myMushroom = new MushroomState();
-        myMushroom.startTime = Time.time;
-        myMushroom.Name = name;
-        myMushroom.growthRate = 100f;
-        Debug.Log("Mushroom Registered");
-        Debug.Log("Name" + name);
-        mushrooms.Add(myMushroom);
-        mushArray = mushrooms.ToArray(); // Every time you add or delete something from the list, you MUSH call this line and Remove(myMushroom)
-    }
-
-    public void RemoveMushroom(string name)
-    {
-        foreach (MushroomState m in mushrooms)
-        {
-            if (m.Name == name)
-            {
-                mushrooms.Remove(m);
-                break;
-            }
-        }
     }
 
 }
