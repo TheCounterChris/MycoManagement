@@ -1,11 +1,18 @@
-﻿public enum MushroomStage {spore, budding, medium, full, dying, dead};
+﻿public enum MushroomStage { spore, budding, medium, full, dying, dead };
 public class MushroomState
 {
-    public float startTime;
 
     public string Name;
-    
-    public float growthRate = 100f;
+
+    public float startTime;
+
+    public float mushGrowth;
+
+    public float potency = 1;
+
+    // public float humidity = 90;
+
+    public bool inIncubator;
 
     public MushroomStage stage = MushroomStage.spore;
 

@@ -12,6 +12,8 @@ public class BotWobble: MonoBehaviour
 
     float wobbleRange;
 
+    public float wobbleDeviation;
+
     float wobbleTime;
 
     float timer;
@@ -45,7 +47,7 @@ public class BotWobble: MonoBehaviour
     void Wobbler()
     {
         wobbleTime = Random.Range(1, 4);
-        wobbleRange = Random.Range(5, -5);
+        wobbleRange = Random.Range(wobbleDeviation, -wobbleDeviation);
         timer = Time.time + wobbleTime;
         Vector3 wobbleVector = originalRotation+ new Vector3(wobbleRange, 0, 0);
         transform.localRotation = Quaternion.Euler(wobbleVector);
