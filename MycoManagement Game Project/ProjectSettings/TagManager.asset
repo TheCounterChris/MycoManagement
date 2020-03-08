@@ -8,6 +8,8 @@ TagManager:
   - Gills
   - Hand
   - PickUp
+  - Fungi
+  - Substrate
   layers:
   - Default
   - TransparentFX
