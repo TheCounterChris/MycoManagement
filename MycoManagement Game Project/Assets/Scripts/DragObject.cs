@@ -10,7 +10,8 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseDown() 
     {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;//find depth of object from camera
+        mZCoord = Camera.current.WorldToScreenPoint(gameObject.transform.position).z;//find depth of object from camera
+        Debug.Log("mouse Z coordinate/ object depth: " + mZCoord);
 
         mOffset = gameObject.transform.position - GetMouseWorldPos();//update how far the mouse is moving
 
@@ -24,7 +25,7 @@ public class DragObject : MonoBehaviour
 
         mousePoint.z = mZCoord;//depth of mouse
 
-        return Camera.main.ScreenToWorldPoint(mousePoint);//send it
+        return mousePoint;//send it
     }
 
     private void OnMouseDrag() {
@@ -33,7 +34,7 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseUp() 
     {
-        gameObject.GetComponent<Rigidbody>().useGravity = false;//turn on gravity
-        gameObject.GetComponent<Rigidbody>().isKinematic = true;//turn off kinematic
+        gameObject.GetComponent<Rigidbody>().useGravity = true;//turn on gravity
+        gameObject.GetComponent<Rigidbody>().isKinematic = false;//turn off kinematic
     }
 }

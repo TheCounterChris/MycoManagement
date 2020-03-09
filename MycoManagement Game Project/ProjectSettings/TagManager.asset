@@ -11,6 +11,7 @@ TagManager:
   - Fungi
   - Substrate
   - FPPosition
+  - Slot
   layers:
   - Default
   - TransparentFX
