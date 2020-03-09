@@ -9,10 +9,21 @@ public class newMovement : MonoBehaviour
     public Rigidbody robotRigid;//rigid body of the robot, what we are actually moving
     Vector3 movement;//to store input
 
+    public Animator animator;
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");//get east west movement
         movement.z = Input.GetAxisRaw("Vertical");//get north south movement
+
+        if(movement != Vector3.zero)
+        {
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
     }
 
     void FixedUpdate()
