@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RedToonMat 2
+  m_Name: BlueToonMat
   m_Shader: {fileID: 4800000, guid: be11c36a01d84f446b25c07355833296, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

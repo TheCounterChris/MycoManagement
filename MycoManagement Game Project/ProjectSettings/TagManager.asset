@@ -10,8 +10,6 @@ TagManager:
   - PickUp
   - Fungi
   - Substrate
-  - FPPosition
-  - Slot
   layers:
   - Default
   - TransparentFX

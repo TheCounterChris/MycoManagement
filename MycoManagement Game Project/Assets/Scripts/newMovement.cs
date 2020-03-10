@@ -9,16 +9,12 @@ public class newMovement : MonoBehaviour
     public Rigidbody robotRigid;//rigid body of the robot, what we are actually moving
     Vector3 movement;//to store input
 
-    //float jump;
-
     public Animator animator;
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");//get east west movement
         movement.z = Input.GetAxisRaw("Vertical");//get north south movement
-
-        //jump = Input.GetAxisRaw("Jump");
 
         if(movement != Vector3.zero)
         {
@@ -40,7 +36,5 @@ public class newMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, qTo, rotSpeed * Time.fixedDeltaTime);//rotate towards new direction over time as set by rotSpeed
         }
-
-        //robotRigid.AddForce(transform.up*jump*100);
     }
 }//class

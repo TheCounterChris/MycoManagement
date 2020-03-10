@@ -4,70 +4,43 @@ using UnityEngine;
 
 public class CameraChange : MonoBehaviour
 {
-    public GameObject ThirdPersonCam;//third person camera
-    public GameObject FirstPersonCam;//first person camera
+    public GameObject ThirdPersonCam;
+    public GameObject FirstPersonCam;
+    public bool CamSwitch = false; //to activate the ability to switch cameras when colliding with specific triggers.
+    public int CamMode;
+    public Collider CharacterBody;
+   public Camera MainCam;
+   
 
-    bool isColliding = false;//if the robot is in position to switch camera
-    public int CamMode;//first or third person
-
+    // Update is called once per frame
     void Start()
     {
-        FirstPersonCam.SetActive(false);//turn off first person camera
+        MainCam = Camera.main;
+        FirstPersonCam.SetActive(false);
     }
-
-    void OnTriggerEnter(Collider other)//on collision
-    {
-        Debug.Log("colliding");
-        if(other.tag == "FPPosition")//if in correct position
-        {
-            isColliding = true;//set camera switch to be enabled
-            Debug.Log("FPPosition");
-        }
-    }
-
-    void OnTriggerExit(Collider other)//left position
-    {
-        Debug.Log("exited");
-        if(other.tag == "FPPosition")
-        {
-            isColliding = false;//set camera switch to be disabled
-        }
-    }
-
     void Update()
     {
-        if(isColliding == true)
-        {
-            if(Input.GetButtonDown("Camera"))
-            {
-                Debug.Log("In position and button pressed");
-                if(CamMode == 1)
-                {
-                CamMode = 0;
-                }
-                else
-                {
-                CamMode = 1;
-                }
-                StartCoroutine (CamChange ());
-            }
-        }        
+      if(Input.GetButtonDown ("Interact")) {
+          if (CamMode == 1) {
+              CamMode = 0;
+          } else {
+              CamMode += 1;
+          }
+          StartCoroutine (CamChange ());
+      }
+IEnumerator CamChange() {
+    yield return new WaitForSeconds (0.01f);
+    if (CamMode == 0) {
+        ThirdPersonCam.SetActive(true);
+        FirstPersonCam.SetActive(false);
+    }
+    if (CamMode == 1) {
+        FirstPersonCam.SetActive(true);
+        ThirdPersonCam.SetActive(false);
+
     }
 
-    IEnumerator CamChange()
-    {
-        yield return new WaitForSeconds (0.01f);
-        if (CamMode == 0)
-        {
-            ThirdPersonCam.SetActive(true);
-            FirstPersonCam.SetActive(false);
-            this.gameObject.GetComponent<newMovement>().enabled = true;
-        }
-        if (CamMode == 1)
-        {
-            FirstPersonCam.SetActive(true);
-            ThirdPersonCam.SetActive(false);
-            this.gameObject.GetComponent<newMovement>().enabled = false;
-        }
+}
+
     }
-}//class
+}
