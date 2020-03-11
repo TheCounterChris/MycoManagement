@@ -15,13 +15,13 @@ public class CutPoint : MonoBehaviour
 
     private void OnMouseOver()//if the mouse goes over the point
     {
-        Debug.Log("MOUSE OVER");//print
+        Debug.Log("Mouse over");//print
         if(Input.GetMouseButton(0))//if the right mouse button is being held
         {
-            Debug.Log("BURRON HELD");//print
+            Debug.Log("Button held");//print
             if(beenCut == false)//if it has not previously been cut
             {
-                Debug.Log("CUT");//print
+                Debug.Log("Cut");//print
                 beenCut = true;//set cut to true
                 this.transform.parent.gameObject.GetComponent<GillExtraction>().UpdateCut();//cut the point
 
