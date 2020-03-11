@@ -7,7 +7,7 @@ public class MushroomManager2 : MonoBehaviour
 
     public List<MushroomState> mushrooms = new List<MushroomState>();
 
-    public GameObject magicSpore, magicBud, magicMed;
+    public GameObject cordySpore, cordyBud, cordyMed;
 
     MushroomState[] mushArray;
 
@@ -70,23 +70,19 @@ public class MushroomManager2 : MonoBehaviour
                     {
                         case 0:
                             m.stage = MushroomStage.spore;
-                            // if (m.Name == "Magic")
-                            //     Instantiate(magicSpore);
                             break;
                         case 10:
                             m.stage = MushroomStage.budding;
-                            if (m.Name == "MagicSpore")
+                            if (m.Name == "Cordyceps")
                             {
-                                Destroy(magicSpore);
-                                Instantiate(magicBud, new Vector3(0f,1f,13f), Quaternion.identity);
+                                ChangeMushModel(cordySpore, cordyBud);
                             }
                             break;
                         case 20:
                             m.stage = MushroomStage.medium;
-                            if (m.Name == "MagicBud")
+                            if (m.Name == "Cordyceps")
                             {
-                                Destroy(magicBud);
-                                Instantiate(magicMed, new Vector3(0f,1f,13f), Quaternion.identity);
+                                ChangeMushModel(cordyBud, cordyMed);
                             }
                             break;
                         case 30:
@@ -110,20 +106,11 @@ public class MushroomManager2 : MonoBehaviour
         }
     }
 
-    // public void InstantiateMushType (MushroomState mushroomState)
-    //     {
-    //         switch (mushroomState)
-    //         {
-    //             case .:
-    //                 if (.Name == "magic")
-    //                     Instantiate(magicSpore);
-
-
-    //         }
-    //         // Instantiate();
-    //         // Destroy();
-    //     }
-
+    public void ChangeMushModel(GameObject oldModel, GameObject newModel)
+    {
+            oldModel.SetActive(false);
+            newModel.SetActive(true);
+    }
 
 
     public void AddMushroom(string name)

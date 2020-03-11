@@ -15,7 +15,7 @@ public class SubstrateToIncubator : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Substrate"))
+        if (other.tag.Contains("Substrate"))
         {
             shroomName = other.name;
             shroom.AddMushroom(shroomName);
@@ -24,7 +24,7 @@ public class SubstrateToIncubator : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Substrate"))
+        if (other.tag.Contains("Substrate"))
         {
             shroomName = other.name;
             shroom.RemoveMushroom(shroomName);

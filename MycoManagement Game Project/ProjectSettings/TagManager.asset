@@ -4,13 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Table
-  - Gills
-  - Hand
-  - PickUp
-  - Fungi
   - Substrate
-  - Magic
+  - CordycepsSubstrate
   layers:
   - Default
   - TransparentFX
