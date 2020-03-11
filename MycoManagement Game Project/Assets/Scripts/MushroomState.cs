@@ -1,4 +1,6 @@
-﻿public enum MushroomStage { spore, budding, medium, full, dying, dead };
+﻿using UnityEngine;
+
+public enum MushroomStage { spore, budding, medium, full, dying, dead };
 public class MushroomState
 {
 
@@ -16,4 +18,11 @@ public class MushroomState
 
     public MushroomStage stage = MushroomStage.spore;
 
+    // public MushroomStage nextStage = MushroomStage.budding;
+
+    public GameObject sporeModel, buddingModel, mediumModel, fullModel, dyingModel, deadModel;
+
+
 }
+
+

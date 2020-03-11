@@ -50,8 +50,7 @@ public class StateDestroy : MonoBehaviour //script that controls the state chang
         {
             MushroomPoints = 0f * Temp.GetComponent<Temperature>().humidityMultiplier;
             // Debug.Log("Mushroom Points = " + MushroomPoints); //if State 1 is alive, Mushroom Points = 0.
- 
-    }
+        }
     }
     void Change1() //state 1 gets destroyed and replaced with state 2 model.
     {

@@ -7,16 +7,22 @@ public class MushroomManager2 : MonoBehaviour
 
     public List<MushroomState> mushrooms = new List<MushroomState>();
 
+    public GameObject magicSpore, magicBud, magicMed;
+
     MushroomState[] mushArray;
 
     public float incubatorTemperature = 25f;
     public float incubatorHumidity = 90f;
+
+    float idealHumidity = 90f;
     float growthModifer = 1f;
     public List<float> mushGrowth = new List<float>();
     // public List<float> potency = new List<float>();
     // public float potency = 1;
-    public int stage;
-    int nextStage;
+    // StateChanger stateChanger;
+
+    public List<GameObject> substrateStage = new List<GameObject>();
+    // int nextStage;
 
     void FixedUpdate()
     {
@@ -27,38 +33,61 @@ public class MushroomManager2 : MonoBehaviour
             {
                 if (m.inIncubator == true)
                 {
+                    //  Calculates growthModifier in relation to ideal temperature of 25 degrees
+                    // and clamps the grothModifier to have max and min speed 4x and 1/4x speed respectively
                     growthModifer = Mathf.Clamp((incubatorTemperature / 25f), .25f, 4f);
 
                     if (incubatorTemperature > 25)
                     {
-                        m.potency -= ((incubatorTemperature - 25)/10000f);
+                        // If temperature exceeds 25 degrees the potency is decreased in relation to how 
+                        // far past the threshold the temperature has gone 
+                        m.potency -= ((incubatorTemperature - 25) / 10000f);
                     }
 
                     if (incubatorHumidity != 90f)
                     {
-                        m.potency *= (incubatorHumidity + (89*90))/8100;
+                        // If incubatorHumidity exceeds idealHumidity (default 90%) the potency is increased
+                        // and if the incubatorHumidity is below idealHumidity potency is decreased. Both of 
+                        // these are proportional to how far incubatorHumidity is from idealHumidity
+                        m.potency *= (incubatorHumidity + ((idealHumidity - 1) * idealHumidity)) / Mathf.Pow(idealHumidity, 2);
                     }
 
-                    mushGrowth[mushrooms.IndexOf(m)] =  m.mushGrowth + ((Time.time - m.startTime) * growthModifer);
+                    m.potency = Mathf.Clamp(m.potency, 0.1f, 10f);
 
-                    Debug.Log("Mushroom Growth: " + mushGrowth[mushrooms.IndexOf(m)]);
-                    Debug.Log("Mushroom Potency: " + m.potency);
+                    // Each mushrooms' growth is calculated by the growth modifier * the length of time the
+                    // mushroom has been in the incubator. This is then added to the mushrooms list item
+                    mushGrowth[mushrooms.IndexOf(m)] = m.mushGrowth + ((Time.time - m.startTime) * growthModifer);
+
+                    // Debug.Log("Mushroom Growth: " + mushGrowth[mushrooms.IndexOf(m)]);
+                    // Debug.Log("Mushroom Potency: " + m.potency);
                     // Debug.Log("Incubator Humidity " + m.humidity);
-                    
+
                     // stage = Mathf.Clamp(stage, 0, 5);
                     // Checks if this stage is earlier then the mushroom stage
-                    // Debug.Log("Mushroom Name -----------" + m.Name);
-                    // Debug.Log("Mushroom Growth -----------" + mushGrowth[mushrooms.IndexOf(m)]);
-                    switch ((int) mushGrowth[mushrooms.IndexOf(m)])
+                    Debug.Log("Mushroom Name -----------" + m.Name);
+                    Debug.Log("Mushroom Growth -----------" + mushGrowth[mushrooms.IndexOf(m)]);
+                    switch ((int)mushGrowth[mushrooms.IndexOf(m)])
                     {
                         case 0:
                             m.stage = MushroomStage.spore;
+                            // if (m.Name == "Magic")
+                            //     Instantiate(magicSpore);
                             break;
                         case 10:
                             m.stage = MushroomStage.budding;
+                            if (m.Name == "MagicSpore")
+                            {
+                                Destroy(magicSpore);
+                                Instantiate(magicBud, new Vector3(0f,1f,13f), Quaternion.identity);
+                            }
                             break;
                         case 20:
                             m.stage = MushroomStage.medium;
+                            if (m.Name == "MagicBud")
+                            {
+                                Destroy(magicBud);
+                                Instantiate(magicMed, new Vector3(0f,1f,13f), Quaternion.identity);
+                            }
                             break;
                         case 30:
                             m.stage = MushroomStage.full;
@@ -73,23 +102,43 @@ public class MushroomManager2 : MonoBehaviour
                         default:
                             break;
                     }
+
+                    // Debug.Log(m.stage);
+
                 }
             }
         }
-
     }
+
+    // public void InstantiateMushType (MushroomState mushroomState)
+    //     {
+    //         switch (mushroomState)
+    //         {
+    //             case .:
+    //                 if (.Name == "magic")
+    //                     Instantiate(magicSpore);
+
+
+    //         }
+    //         // Instantiate();
+    //         // Destroy();
+    //     }
+
+
 
     public void AddMushroom(string name)
     {
+        // As each substrate is added to the incubator, its name, entrance time and a confirmation bool are 
+        // added to the MushroomState list. The mushGrowth list also adds another item in order to allow the 
+        // growths to be independently calculated. The mushroom list is then converted into an array for computation
         MushroomState m = new MushroomState();
         m.Name = name;
         m.startTime = Time.time;
         mushGrowth.Add(1);
         m.inIncubator = true;
-
-        Debug.Log("START TIME ----" + m.startTime);
-        // Debug.Log("Name " + name);
-        Debug.Log("Mushroom Growth " + m.mushGrowth);
+        // Debug.Log("START TIME ----" + m.startTime);
+        Debug.Log("Name " + name);
+        // Debug.Log("Mushroom Growth " + m.mushGrowth);
         // Debug.Log("In Incubator: " + m.inIncubator);
 
         mushrooms.Add(m);
@@ -98,6 +147,8 @@ public class MushroomManager2 : MonoBehaviour
 
     public void RemoveMushroom(string name)
     {
+        // When a substrate is removed from the incubator it's corresponding growth and potency are locked.
+        // Points are calculated before the MushroomStage list is converted back to an Array.
         foreach (MushroomState m in mushrooms)
         {
             if (m.Name == name)
