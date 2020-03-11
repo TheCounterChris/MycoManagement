@@ -10,6 +10,9 @@ TagManager:
   - PickUp
   - Fungi
   - Substrate
+  - FirstPersHoldPos
+  - FPPosition
+  - FPCam
   layers:
   - Default
   - TransparentFX
