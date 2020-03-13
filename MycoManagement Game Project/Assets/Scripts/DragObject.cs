@@ -15,7 +15,7 @@ public class DragObject : MonoBehaviour
         mOffset = gameObject.transform.position - GetMouseWorldPos();//update how far the mouse is moving
 
         gameObject.GetComponent<Rigidbody>().useGravity = false;//turn off gravity
-        //gameObject.GetComponent<Rigidbody>().isKinematic = true;//turn on kinematic
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;//turn on kinematic
     }
 
     private Vector3 GetMouseWorldPos()//figure out mouse delta
@@ -33,7 +33,7 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseUp() 
     {
-        gameObject.GetComponent<Rigidbody>().useGravity = false;//turn on gravity
-        gameObject.GetComponent<Rigidbody>().isKinematic = true;//turn off kinematic
+        gameObject.GetComponent<Rigidbody>().useGravity = true;//turn on gravity
+        gameObject.GetComponent<Rigidbody>().isKinematic = false;//turn off kinematic
     }
 }

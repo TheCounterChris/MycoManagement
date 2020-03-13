@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    Transform hand;//hand position
+    public Transform hand;//hand position
     Transform firstPersHoldPos;//first person hold position
 
     bool colliding = false;//if hand is colliding with object

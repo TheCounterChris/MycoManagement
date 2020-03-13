@@ -21,10 +21,10 @@ public class SingleDishManager : MonoBehaviour
 
     void Update()
     {
-        if(gameObject.transform.parent.tag == "Slot")
-        {
-            timer += Time.deltaTime;
-        }
+        // if(gameObject.transform.parent.tag == "Slot")
+        // {
+        //     timer += Time.deltaTime;
+        // }
 
         if(timer >= 5)
         {
