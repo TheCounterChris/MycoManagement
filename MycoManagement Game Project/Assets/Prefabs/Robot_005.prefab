@@ -5412,6 +5412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70f150d58924024fbd725316c7e0926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wobbleDeviation: 0
 --- !u!1 &7526609464053548079
 GameObject:
   m_ObjectHideFlags: 0
