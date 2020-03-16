@@ -1183,7 +1183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454877709}
   m_LocalRotation: {x: 0.19525446, y: -0.9679254, z: -0.046294022, w: -0.1511716}
-  m_LocalPosition: {x: 0.10038961, y: 0.6304202, z: -0.25390851}
+  m_LocalPosition: {x: -0.013, y: 0.036, z: 0.004}
   m_LocalScale: {x: 1.5221756, y: 1.5221741, z: 1.5221753}
   m_Children: []
   m_Father: {fileID: 897045561}
@@ -1932,8 +1932,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3636002113250326429}
-  m_LocalRotation: {x: -0.7071068, y: -7.626293e-33, z: -9.805237e-33, w: 0.7071067}
-  m_LocalPosition: {x: 20.29, y: 1.97, z: -0.73}
+  m_LocalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
+  m_LocalPosition: {x: -4.04, y: 1.97, z: 2.57}
   m_LocalScale: {x: 1, y: 1.8530995, z: 1.5754995}
   m_Children:
   - {fileID: 408193818}
@@ -1942,7 +1942,7 @@ Transform:
   - {fileID: 603278823}
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 90, z: 0}
 --- !u!4 &3094257486224524983
 Transform:
   m_ObjectHideFlags: 0
@@ -1982,6 +1982,8 @@ GameObject:
   - component: {fileID: 2549183872538097586}
   - component: {fileID: 7766548928166326610}
   - component: {fileID: 6048662418701651005}
+  - component: {fileID: 3636002113250326430}
+  - component: {fileID: 3636002113250326431}
   m_Layer: 0
   m_Name: Dish Rack
   m_TagString: Rack
@@ -1989,6 +1991,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3636002113250326430
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3636002113250326429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3790298, y: 3.2333996, z: 2.535}
+  m_Center: {x: 0.611004, y: 0.004732863, z: 0.03371146}
+--- !u!114 &3636002113250326431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3636002113250326429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15aa863754cd864485b3ddc3ce8ccc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - {fileID: 408193817}
+  - {fileID: 408193817}
+  - {fileID: 280628826}
+  - {fileID: 603278822}
 --- !u!1 &3666751357348475363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,7 +3602,7 @@ GameObject:
   - component: {fileID: 8104220353846859115}
   m_Layer: 0
   m_Name: Dish Parent
-  m_TagString: Untagged
+  m_TagString: Dish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3583,7 +3615,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8104220353846859124}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.23782714, y: 0.028795958, z: 0.24048018}

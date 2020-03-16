@@ -74,7 +74,7 @@ public class PickUp : MonoBehaviour
     {
         if(pickedUp == false)//if not holding anything
         {
-            GetComponent<Collider>().enabled = false;//turn off collider so it doesn't hit stuff when moving
+            //GetComponent<Collider>().enabled = false;//turn off collider so it doesn't hit stuff when moving
             GetComponent<Rigidbody>().isKinematic = true;//turn on kinematic just to make sure it doesn't hit stuff when moving        
             GetComponent<Rigidbody>().useGravity = false;//turn off gravity
             this.transform.position = hand.position;//move object to hand

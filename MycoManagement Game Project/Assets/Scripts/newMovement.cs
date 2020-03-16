@@ -47,7 +47,7 @@ public class newMovement : MonoBehaviour
     {
         robotRigid.MovePosition(robotRigid.position + movement.normalized * currentSpeed * Time.fixedDeltaTime);//move robot the direction of the input    
 
-        Debug.Log(movement.normalized * currentSpeed * Time.fixedDeltaTime);
+        //Debug.Log(movement.normalized * currentSpeed * Time.fixedDeltaTime);
 
         if (movement != Vector3.zero)//as long as there is input, turn the robot. This keeps the robot to turning to 0, 0, 0 when there is no input.
         {

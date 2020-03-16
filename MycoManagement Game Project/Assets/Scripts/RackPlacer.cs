@@ -8,47 +8,48 @@ public class RackPlacer : MonoBehaviour
     public List<GameObject> slots = new List<GameObject>();
 
     GameObject availableSlot;
-    public GameObject substrateSlot;
+    //public GameObject substrateSlot;
 
     private void OnTriggerEnter(Collider other) 
     {
-        if(other.tag == "Rack")
+        if(other.tag == "Dish")
         {
-            Debug.Log("RACK!! RACK !! RACK!!");
+            Debug.Log("Dish colliding");
             //gameObject.transform.parent = null;
             checkAvailability();
-            gameObject.transform.position = availableSlot.transform.position;
-            gameObject.transform.parent = availableSlot.transform;
+            other.gameObject.transform.position = availableSlot.transform.position;
+            other.gameObject.transform.parent = availableSlot.transform;
+            other.gameObject.transform.rotation = Quaternion.identity;
             }
         
-        if(other.tag == "SubstrateStation")
-        {
-            Debug.Log("Substrate Station");
+        // if(other.tag == "SubstrateStation")
+        // {
+        //     Debug.Log("Substrate Station");
 
-            if(substrateSlot.transform.childCount == 0)
-            {
-                gameObject.transform.position = substrateSlot.transform.position;
-                gameObject.transform.parent = substrateSlot.transform;
-            }
-            else
-            {
-                Debug.Log("No space on counter");
-            }
+        //     if(substrateSlot.transform.childCount == 0)
+        //     {
+        //         gameObject.transform.position = substrateSlot.transform.position;
+        //         gameObject.transform.parent = substrateSlot.transform;
+        //     }
+        //     else
+        //     {
+        //         Debug.Log("No space on counter");
+        //     }
             
-        }
+        // }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Rack")
+        if(other.tag == "Dish")
         {
-            Debug.Log("NOT RACK !! NOT RACK !! NOT RACK!!");
+            Debug.Log("No More Dish");
         }
 
-        if(other.tag == "SubstrateStation")
-        {
-            Debug.Log("NO MORE SUBSTRATE");
-        }
+        // if(other.tag == "SubstrateStation")
+        // {
+        //     Debug.Log("NO MORE SUBSTRATE");
+        // }
     }
 
     void checkAvailability()
