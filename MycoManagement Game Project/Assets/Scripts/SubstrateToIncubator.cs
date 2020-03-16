@@ -27,7 +27,7 @@ public class SubstrateToIncubator : MonoBehaviour
         if (other.tag.Contains("Substrate"))
         {
             shroomName = other.name;
-            shroom.RemoveMushroom(shroomName);
+            shroom.StopMushroom(shroomName);
         }
         // other.gameObject.tag = "Fungi";
     }

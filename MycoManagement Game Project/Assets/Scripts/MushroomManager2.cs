@@ -108,8 +108,8 @@ public class MushroomManager2 : MonoBehaviour
 
     public void ChangeMushModel(GameObject oldModel, GameObject newModel)
     {
-            oldModel.SetActive(false);
-            newModel.SetActive(true);
+        oldModel.SetActive(false);
+        newModel.SetActive(true);
     }
 
 
@@ -132,10 +132,8 @@ public class MushroomManager2 : MonoBehaviour
         mushArray = mushrooms.ToArray(); // Every time you add or delete something from the list, you MUSH call this line and Remove(m)
     }
 
-    public void RemoveMushroom(string name)
+    public void StopMushroom(string name)
     {
-        // When a substrate is removed from the incubator it's corresponding growth and potency are locked.
-        // Points are calculated before the MushroomStage list is converted back to an Array.
         foreach (MushroomState m in mushrooms)
         {
             if (m.Name == name)
@@ -148,6 +146,33 @@ public class MushroomManager2 : MonoBehaviour
                 Debug.Log("Name ---------------" + name);
                 // Debug.Log("In Incubator: " + m.inIncubator);
                 Debug.Log("Stage: " + m.stage);
+                Debug.Log("Mushroom Growth ---------" + m.mushGrowth);
+                Debug.Log("Potency ---------" + m.potency);
+                // Debug.Log("Humidity -------" + m.humidity);
+                // Debug.Log("POINTS ------" + m.potency * m.mushGrowth * m.humidity);
+                // mushrooms.Remove(m);
+                // mushArray = mushrooms.ToArray();
+                break;
+            }
+        }
+    }
+
+    public void RemoveMushroom(string name)
+    {
+        // When a substrate is removed from the incubator it's corresponding growth and potency are locked.
+        // Points are calculated before the MushroomStage list is converted back to an Array.
+        foreach (MushroomState m in mushrooms)
+        {
+            if (m.Name == name)
+            {
+                // m.startTime = 0;
+                // m.mushGrowth = mushGrowth[mushrooms.IndexOf(m)];
+                // // m.stage = ;
+                // m.inIncubator = false;
+                // // Debug.Log(mushrooms.IndexOf(m));
+                // Debug.Log("Name ---------------" + name);
+                // // Debug.Log("In Incubator: " + m.inIncubator);
+                // Debug.Log("Stage: " + m.stage);
                 Debug.Log("Mushroom Growth ---------" + m.mushGrowth);
                 Debug.Log("Potency ---------" + m.potency);
                 // Debug.Log("Humidity -------" + m.humidity);
