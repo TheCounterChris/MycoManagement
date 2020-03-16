@@ -17,17 +17,17 @@ public class CameraChange : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("colliding");
+        // Debug.Log("colliding");
         if(other.tag == "FPPosition")//if in correct position
         {
             isColliding = true;//set camera switch to be enabled
-            Debug.Log("FPPosition");
+            // Debug.Log("FPPosition");
         }
     }
 
     void OnTriggerExit(Collider other)//left position
     {
-        Debug.Log("exited");
+        // Debug.Log("exited");
         if(other.tag == "FPPosition")
         {
             isColliding = false;//set camera switch to be disabled
@@ -40,7 +40,7 @@ public class CameraChange : MonoBehaviour
         {
             if(Input.GetButtonDown("Camera"))
             {
-                Debug.Log("In position and button pressed");
+                // Debug.Log("In position and button pressed");
                 if(CamMode == 1)
                 {
                 CamMode = 0;
