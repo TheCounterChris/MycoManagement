@@ -9,14 +9,14 @@ public class PickUp : MonoBehaviour
 
     bool colliding = false;//if hand is colliding with object
     bool pickedUp = false;//if hand is already holding something
-
+    
     void Start()
     {
         hand = GameObject.Find("Hand").transform;
         Debug.Log("HAND: " + hand);
 
         firstPersHoldPos = GameObject.Find("FirstPersHoldPos").transform;
-        Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);       
+        Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);
     }
 
     void Update()
