@@ -74,11 +74,8 @@ public class PickUp : MonoBehaviour
     {
         if(pickedUp == false)//if not holding anything
         {
-            if(GetComponent<Rigidbody>().isKinematic == false)//if not kinematic
-            {
-                GetComponent<Collider>().enabled = false;//turn off collider; i don't remember why i do this but it works so idk
-            }
-        
+            GetComponent<Collider>().enabled = false;//turn off collider so it doesn't hit stuff when moving
+            GetComponent<Rigidbody>().isKinematic = true;//turn on kinematic just to make sure it doesn't hit stuff when moving        
             GetComponent<Rigidbody>().useGravity = false;//turn off gravity
             this.transform.position = hand.position;//move object to hand
             this.transform.parent = hand;//parent object to hand so it moves with robot
@@ -96,6 +93,7 @@ public class PickUp : MonoBehaviour
             this.transform.position = firstPersHoldPos.position;//move object infront of player
             this.transform.parent = null;//remove parent
             GetComponent<Collider>().enabled = true;//turn on collider
+            GetComponent<Rigidbody>().isKinematic = false;//turn off kinematic
             GetComponent<Rigidbody>().useGravity = true;//turn on gravity
 
             pickedUp = false;//not being held
