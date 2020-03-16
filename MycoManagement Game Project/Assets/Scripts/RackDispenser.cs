@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RackDispenser : MonoBehaviour
 {
-    public GameObject hand;
+    GameObject hand;
     public List<GameObject> slots = new List<GameObject>();
 
     bool colliding;
 
     void Start()
     {
-        
+        hand = GameObject.Find("Hand");
     }
 
     // Update is called once per frame
@@ -33,6 +33,7 @@ public class RackDispenser : MonoBehaviour
                             GameObject firstDish = slots[i].transform.GetChild(0).gameObject;
                             firstDish.transform.position = hand.transform.position;
                             firstDish.transform.parent = hand.transform;
+                            firstDish.gameObject.GetComponent<PickUp>().enabled = true;
                             Debug.Log("picked up object");
 
                             break;
@@ -40,16 +41,14 @@ public class RackDispenser : MonoBehaviour
                     }
                 }
             }
-        }
-        
-        
+        }        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "PickUp")
         {
-            Debug.Log("SWIGNSHJKLABFALSKH");
+            Debug.Log("Robot in place");
             colliding = true;            
         }
     }
@@ -58,7 +57,7 @@ public class RackDispenser : MonoBehaviour
     {
         if(other.tag == "PickUp")
         {
-            Debug.Log("QWERTYYUIOP{");
+            Debug.Log("Robot not in place :(");
             colliding = false;
         }
     }

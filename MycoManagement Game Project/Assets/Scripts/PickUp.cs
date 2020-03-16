@@ -16,7 +16,7 @@ public class PickUp : MonoBehaviour
         Debug.Log("HAND: " + hand);
 
         firstPersHoldPos = GameObject.Find("FirstPersHoldPos").transform;
-        Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);       
+        Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);
     }
 
     void Update()
@@ -38,7 +38,7 @@ public class PickUp : MonoBehaviour
             if(colliding == true)//something to pick up
             {
                 Debug.Log("No held item and in position to pick up");
-                if(Input.GetButtonDown("Pick Up"))//get input key
+                if(Input.GetButtonDown("Interact"))//get input key
                 {
                     Debug.Log("Pressed button to pick up object");
                     PickUpObject();//pick up the object
@@ -46,7 +46,7 @@ public class PickUp : MonoBehaviour
             }
             else//not in position to pick up
             {
-                if(Input.GetButtonDown("Pick Up"))//get input key
+                if(Input.GetButtonDown("Interact"))//get input key
                 {
                     Debug.Log("Pressed button to pick up object, but not in position to pick up object");
                 }
@@ -54,7 +54,7 @@ public class PickUp : MonoBehaviour
         }
         else if(pickedUp == true)//already holding something
         {
-            if(Input.GetButtonDown("Put Down"))//input to put down object
+            if(Input.GetButtonDown("Interact"))//input to put down object
             {
                 Debug.Log("Pressed button to put down object");
                 PutDownObject();//put down object
@@ -62,7 +62,7 @@ public class PickUp : MonoBehaviour
         }
         else//if something went wrong
         {
-            if(Input.GetButtonDown("Put Down"))
+            if(Input.GetButtonDown("Interact"))
             {
                 Debug.Log("There is no held item");
             }
@@ -74,7 +74,7 @@ public class PickUp : MonoBehaviour
     {
         if(pickedUp == false)//if not holding anything
         {
-            GetComponent<Collider>().enabled = false;//turn off collider so it doesn't hit stuff when moving
+            GetComponent<Collider>().isTrigger = true;//turn off collider so it doesn't hit stuff when moving
             GetComponent<Rigidbody>().isKinematic = true;//turn on kinematic just to make sure it doesn't hit stuff when moving        
             GetComponent<Rigidbody>().useGravity = false;//turn off gravity
             this.transform.position = hand.position;//move object to hand
@@ -91,8 +91,9 @@ public class PickUp : MonoBehaviour
         if(this.transform.parent == hand)//if the object is indeed being held
         {
             this.transform.position = firstPersHoldPos.position;//move object infront of player
+            this.transform.rotation = Quaternion.identity;
             this.transform.parent = null;//remove parent
-            GetComponent<Collider>().enabled = true;//turn on collider
+            GetComponent<Collider>().isTrigger = false;//turn on colliders
             GetComponent<Rigidbody>().isKinematic = false;//turn off kinematic
             GetComponent<Rigidbody>().useGravity = true;//turn on gravity
 
