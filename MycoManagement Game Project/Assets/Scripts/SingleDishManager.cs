@@ -21,7 +21,7 @@ public class SingleDishManager : MonoBehaviour
 
     void Update()
     {
-        if(gameObject.transform.parent.tag == "Slot")
+        if(gameObject.transform.parent.tag == "Slot" && fullDish.activeSelf)
         {
             timer += Time.deltaTime;
         }

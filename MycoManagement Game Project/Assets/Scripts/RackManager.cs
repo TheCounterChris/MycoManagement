@@ -30,6 +30,7 @@ public class RackManager : MonoBehaviour
                 dish.gameObject.transform.parent = availableSlot.transform;
                 dish.gameObject.transform.rotation = Quaternion.identity;
                 dish.gameObject.GetComponent<PickUp>().enabled = false;
+                dishColliding = false;
             }
         }
 
@@ -82,6 +83,7 @@ public class RackManager : MonoBehaviour
         if(other.tag == "Dish")
         {
             Debug.Log("No More Dish");
+            dishColliding = false;
         }
 
         if(other.tag == "PickUp")
