@@ -5,7 +5,7 @@ using UnityEngine;
 public class BotWobble: MonoBehaviour
 
 {
-    bool still;
+    bool moving;
 
     bool stillSwitch;
     Vector3 originalRotation;
@@ -13,6 +13,7 @@ public class BotWobble: MonoBehaviour
     float wobbleRange;
 
     public float wobbleDeviation;
+    // public Vector3 wobbleVector;
 
     float wobbleTime;
 
@@ -20,15 +21,18 @@ public class BotWobble: MonoBehaviour
 
     void Start()
     {
-        originalRotation= transform.localRotation.eulerAngles;
+        originalRotation = transform.localRotation.eulerAngles;
+    //    GameObject Armature = GameObject.Find("Armature");
+    //    originalRotation = Armature.transform.localRotation.eulerAngles;
+        Debug.Log(originalRotation);
         stillSwitch = true;
     }
 
     void Update()
     {
-
-        still = GetComponentInParent<CharController>().stationary;
-        if (still && stillSwitch)
+        // still = GetComponentInParent<CharController>().stationary; // FUN - G
+        moving = GetComponentInParent<NewerMovement>().isMoving; // AdamRobot
+        if (moving == false && stillSwitch == true)
         {
             if (stillSwitch)
             {
@@ -46,13 +50,13 @@ public class BotWobble: MonoBehaviour
 
     void Wobbler()
     {
-        wobbleTime = Random.Range(1, 4);
+        wobbleTime = Random.Range(1, 5);
         wobbleRange = Random.Range(wobbleDeviation, -wobbleDeviation);
         timer = Time.time + wobbleTime;
-        Vector3 wobbleVector = originalRotation+ new Vector3(wobbleRange, 0, 0);
+        Vector3 wobbleVector = originalRotation + new Vector3(wobbleRange, 0, 0);
         transform.localRotation = Quaternion.Euler(wobbleVector);
-        // Debug.Log("New Rotation" + wobbleVector);
-        // Debug.Log("timer " + timer);
+        Debug.Log("New Rotation" + wobbleVector);
+        Debug.Log("timer " + timer);
     }
 
 }

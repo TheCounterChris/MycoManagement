@@ -20,7 +20,7 @@ public class MushroomState
 
     // public MushroomStage nextStage = MushroomStage.budding;
 
-    public GameObject sporeModel, buddingModel, mediumModel, fullModel, dyingModel, deadModel;
+    // public GameObject sporeModel, buddingModel, mediumModel, fullModel, dyingModel, deadModel;
 
 
 }

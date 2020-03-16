@@ -25,8 +25,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Glossiness: 32
-    - _RimAmount: 0.585
-    - _RimThreshold: 0
+    - _RimAmount: 0.554
+    - _RimThreshold: 0.018
     m_Colors:
     - _AmbientColor: {r: 0.16260235, g: 0.3079496, b: 0.5471698, a: 1}
     - _Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
