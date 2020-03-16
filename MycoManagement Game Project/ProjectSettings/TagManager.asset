@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Substrate
   - CordycepsSubstrate
+  - PickUp
+  - FirstPersHoldPos
+  - Hand
+  - FPPosition
+  - Gills
+  - Table
+  - Rack
+  - Slot
   layers:
   - Default
   - TransparentFX
