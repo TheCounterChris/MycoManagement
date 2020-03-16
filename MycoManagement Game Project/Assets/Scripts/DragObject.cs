@@ -33,6 +33,7 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseUp() 
     {
+        gameObject.GetComponent<Collider>().isTrigger = false;//turn off trigger so it collides
         gameObject.GetComponent<Rigidbody>().useGravity = true;//turn on gravity
         gameObject.GetComponent<Rigidbody>().isKinematic = false;//turn off kinematic
     }

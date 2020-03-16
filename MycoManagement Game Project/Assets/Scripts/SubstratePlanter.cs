@@ -5,30 +5,32 @@ using UnityEngine;
 public class SubstratePlanter : MonoBehaviour
 {
 
-    GameObject emptyPot;
-    GameObject plantedPot;
-
-    public Transform slot;
+    GameObject emptyBag;
+    GameObject halfBag;
+    GameObject inflatedBag;
 
     int buttonPressed = 0;
+    public int timeLimit = 5;
+    public int buttonGoal = 10;
 
     float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        emptyPot = this.gameObject.transform.GetChild(0).gameObject;
-        plantedPot = this.gameObject.transform.GetChild(1).gameObject;
+        emptyBag = this.gameObject.transform.GetChild(0).gameObject;
+        halfBag = this.gameObject.transform.GetChild(1).gameObject;
+        inflatedBag = this.gameObject.transform.GetChild(2).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(slot.childCount > 0)
+        if(halfBag.activeSelf)
         {
             timer += Time.deltaTime;
 
-            if(timer <= 5)
+            if(timer <= timeLimit)
             {
                 if(Input.GetKeyDown("space"))
                 {
@@ -41,13 +43,26 @@ public class SubstratePlanter : MonoBehaviour
                 buttonPressed = 0;
             }
 
-            if(buttonPressed >= 10)
+            if(buttonPressed >= buttonGoal)
             {
-                emptyPot.SetActive(false);
-                plantedPot.SetActive(true);
-
-                Destroy(slot.GetChild(0).gameObject);
+                halfBag.SetActive(false);
+                inflatedBag.SetActive(true);
             }                  
         }        
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Dish")
+        {
+            emptyBag.SetActive(false);
+            halfBag.SetActive(true);
+            
+            Destroy(other.gameObject);
+        }
+        else
+        {
+            Debug.Log("Not a dish");
+        }
     }
 }
