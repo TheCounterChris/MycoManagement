@@ -8,6 +8,7 @@ public class RackPlacer : MonoBehaviour
     public List<GameObject> slots = new List<GameObject>();
 
     GameObject availableSlot;
+
     //public GameObject substrateSlot;
 
     private void OnTriggerEnter(Collider other) 
@@ -20,6 +21,7 @@ public class RackPlacer : MonoBehaviour
             other.gameObject.transform.position = availableSlot.transform.position;
             other.gameObject.transform.parent = availableSlot.transform;
             other.gameObject.transform.rotation = Quaternion.identity;
+            other.gameObject.GetComponent<PickUp>().enabled = false;
             }
         
         // if(other.tag == "SubstrateStation")

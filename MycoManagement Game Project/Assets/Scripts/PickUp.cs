@@ -9,7 +9,7 @@ public class PickUp : MonoBehaviour
 
     bool colliding = false;//if hand is colliding with object
     bool pickedUp = false;//if hand is already holding something
-    
+
     void Start()
     {
         hand = GameObject.Find("Hand").transform;
@@ -74,7 +74,7 @@ public class PickUp : MonoBehaviour
     {
         if(pickedUp == false)//if not holding anything
         {
-            //GetComponent<Collider>().enabled = false;//turn off collider so it doesn't hit stuff when moving
+            GetComponent<Collider>().isTrigger = true;//turn off collider so it doesn't hit stuff when moving
             GetComponent<Rigidbody>().isKinematic = true;//turn on kinematic just to make sure it doesn't hit stuff when moving        
             GetComponent<Rigidbody>().useGravity = false;//turn off gravity
             this.transform.position = hand.position;//move object to hand
@@ -92,7 +92,7 @@ public class PickUp : MonoBehaviour
         {
             this.transform.position = firstPersHoldPos.position;//move object infront of player
             this.transform.parent = null;//remove parent
-            GetComponent<Collider>().enabled = true;//turn on collider
+            GetComponent<Collider>().isTrigger = false;//turn on colliders
             GetComponent<Rigidbody>().isKinematic = false;//turn off kinematic
             GetComponent<Rigidbody>().useGravity = true;//turn on gravity
 
