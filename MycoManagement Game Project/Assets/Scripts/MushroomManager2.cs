@@ -124,7 +124,7 @@ public class MushroomManager2 : MonoBehaviour
         mushGrowth.Add(1);
         m.inIncubator = true;
         // Debug.Log("START TIME ----" + m.startTime);
-        Debug.Log("Name " + name);
+        // Debug.Log("Name " + name);
         // Debug.Log("Mushroom Growth " + m.mushGrowth);
         // Debug.Log("In Incubator: " + m.inIncubator);
 
@@ -143,11 +143,11 @@ public class MushroomManager2 : MonoBehaviour
                 // m.stage = ;
                 m.inIncubator = false;
                 // Debug.Log(mushrooms.IndexOf(m));
-                Debug.Log("Name ---------------" + name);
+                Debug.Log("Name: " + name);
                 // Debug.Log("In Incubator: " + m.inIncubator);
                 Debug.Log("Stage: " + m.stage);
-                Debug.Log("Mushroom Growth ---------" + m.mushGrowth);
-                Debug.Log("Potency ---------" + m.potency);
+                Debug.Log("Mushroom Growth: " + m.mushGrowth);
+                Debug.Log("Potency: " + m.potency);
                 // Debug.Log("Humidity -------" + m.humidity);
                 // Debug.Log("POINTS ------" + m.potency * m.mushGrowth * m.humidity);
                 // mushrooms.Remove(m);

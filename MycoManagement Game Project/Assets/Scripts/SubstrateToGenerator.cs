@@ -18,6 +18,7 @@ public class SubstrateToGenerator : MonoBehaviour
         if (other.tag.Contains("Substrate"))
         {
             shroomName = other.name;
+            // Debug.Log(shroom.);
             shroom.RemoveMushroom(shroomName);
             Destroy(other.gameObject);
         }
