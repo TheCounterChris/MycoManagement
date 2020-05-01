@@ -551,6 +551,7 @@ MonoBehaviour:
   cordySpore: {fileID: 697769248}
   cordyBud: {fileID: 1107659481}
   cordyMed: {fileID: 1246593876}
+  IncubatorController: {fileID: 639198486}
   incubatorTemperature: 50
   incubatorHumidity: 90
   mushGrowth: []
@@ -1332,6 +1333,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &639198486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7312959698288178513, guid: 8f85f7f3ccdb0a54da7bc15dfd01ee88,
+    type: 3}
+  m_PrefabInstance: {fileID: 1658307514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &663182929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1352,12 +1359,12 @@ PrefabInstance:
     - target: {fileID: 8765998367527593466, guid: 97b88854986afaf448db66fc67f1c322,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.77767
+      value: 17.777672
       objectReference: {fileID: 0}
     - target: {fileID: 8765998367527593466, guid: 97b88854986afaf448db66fc67f1c322,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.309313
+      value: 12.620688
       objectReference: {fileID: 0}
     - target: {fileID: 8765998367527593466, guid: 97b88854986afaf448db66fc67f1c322,
         type: 3}
@@ -1833,12 +1840,12 @@ PrefabInstance:
     - target: {fileID: 9073777631515166726, guid: c7898d5c66cc6a8449b9bbb7109ff6ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.77767
+      value: 17.777672
       objectReference: {fileID: 0}
     - target: {fileID: 9073777631515166726, guid: c7898d5c66cc6a8449b9bbb7109ff6ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.309313
+      value: 12.620688
       objectReference: {fileID: 0}
     - target: {fileID: 9073777631515166726, guid: c7898d5c66cc6a8449b9bbb7109ff6ca,
         type: 3}
@@ -7875,8 +7882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534753760beeacc4bb23d3ceb8b61237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incubatorTempSlider: {fileID: 0}
-  incubatorHumiditySlider: {fileID: 0}
+  incubatorTempSlider: {fileID: 573889711}
+  incubatorHumiditySlider: {fileID: 486500183}
   incubatorTemp: 0
   incubatorHumidity: 0
 --- !u!1001 &1658307514
@@ -8860,7 +8867,7 @@ PrefabInstance:
     - target: {fileID: 4766403917353047134, guid: 079f67663ad69164e9e5976d496a9c7a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 27.93
       objectReference: {fileID: 0}
     - target: {fileID: 4766403917353047134, guid: 079f67663ad69164e9e5976d496a9c7a,
         type: 3}

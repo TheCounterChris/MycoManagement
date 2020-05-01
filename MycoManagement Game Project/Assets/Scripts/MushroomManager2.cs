@@ -11,8 +11,10 @@ public class MushroomManager2 : MonoBehaviour
 
     MushroomState[] mushArray;
 
-    public float incubatorTemperature = 25f;
-    public float incubatorHumidity = 90f;
+    public GameObject IncubatorController;
+
+    public float incubatorTemperature;
+    public float incubatorHumidity;
 
     float idealHumidity = 90f;
     float growthModifer = 1f;
@@ -26,6 +28,9 @@ public class MushroomManager2 : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        incubatorTemperature = IncubatorController.GetComponentInChildren<IncubatorControls>().incubatorTemp;
+        incubatorHumidity = IncubatorController.GetComponentInChildren<IncubatorControls>().incubatorHumidity;
 
         if (mushArray != null)
         {
@@ -59,7 +64,7 @@ public class MushroomManager2 : MonoBehaviour
                     mushGrowth[mushrooms.IndexOf(m)] = m.mushGrowth + ((Time.time - m.startTime) * growthModifer);
 
                     // Debug.Log("Mushroom Growth: " + mushGrowth[mushrooms.IndexOf(m)]);
-                    // Debug.Log("Mushroom Potency: " + m.potency);
+                    Debug.Log("Mushroom Potency: " + m.potency);
                     // Debug.Log("Incubator Humidity " + m.humidity);
 
                     // stage = Mathf.Clamp(stage, 0, 5);

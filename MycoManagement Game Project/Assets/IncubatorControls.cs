@@ -13,7 +13,7 @@ public class IncubatorControls : MonoBehaviour
     public float incubatorTemp;
 
     public float incubatorHumidity;
-    void Start() 
+    void Start()
     {
         incubatorTemp = incubatorTempSlider.value;
         incubatorHumidity = incubatorHumiditySlider.value;
@@ -22,6 +22,7 @@ public class IncubatorControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        incubatorTemp = incubatorTempSlider.value;
+        incubatorHumidity = incubatorHumiditySlider.value;
     }
 }
