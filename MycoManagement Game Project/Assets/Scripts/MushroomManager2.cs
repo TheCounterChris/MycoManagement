@@ -9,6 +9,8 @@ public class MushroomManager2 : MonoBehaviour
 
     public GameObject cordySpore, cordyBud, cordyMed;
 
+    public GameObject lionSpore, lionBud, lionMed;
+
     MushroomState[] mushArray;
 
     public GameObject IncubatorController;
@@ -64,13 +66,13 @@ public class MushroomManager2 : MonoBehaviour
                     mushGrowth[mushrooms.IndexOf(m)] = m.mushGrowth + ((Time.time - m.startTime) * growthModifer);
 
                     // Debug.Log("Mushroom Growth: " + mushGrowth[mushrooms.IndexOf(m)]);
-                    Debug.Log("Mushroom Potency: " + m.potency);
-                    // Debug.Log("Incubator Humidity " + m.humidity);
+                    // Debug.Log("Mushroom Potency: " + m.potency);
+                    // // Debug.Log("Incubator Humidity " + m.humidity);
 
-                    // stage = Mathf.Clamp(stage, 0, 5);
-                    // Checks if this stage is earlier then the mushroom stage
-                    Debug.Log("Mushroom Name -----------" + m.Name);
-                    Debug.Log("Mushroom Growth -----------" + mushGrowth[mushrooms.IndexOf(m)]);
+                    // // stage = Mathf.Clamp(stage, 0, 5);
+                    // // Checks if this stage is earlier then the mushroom stage
+                    // Debug.Log("Mushroom Name -----------" + m.Name);
+                    // Debug.Log("Mushroom Growth -----------" + mushGrowth[mushrooms.IndexOf(m)]);
                     switch ((int)mushGrowth[mushrooms.IndexOf(m)])
                     {
                         case 0:
@@ -82,6 +84,11 @@ public class MushroomManager2 : MonoBehaviour
                             {
                                 ChangeMushModel(cordySpore, cordyBud);
                             }
+
+                            if (m.Name == "Lionsmane")
+                            {
+                                ChangeMushModel(lionSpore, lionBud);
+                            }
                             break;
                         case 20:
                             m.stage = MushroomStage.medium;
@@ -89,6 +96,10 @@ public class MushroomManager2 : MonoBehaviour
                             {
                                 ChangeMushModel(cordyBud, cordyMed);
                             }
+                            if (m.Name == "Lionsmane")
+                            {
+                                ChangeMushModel(lionBud, lionMed);
+                            }                            
                             break;
                         case 30:
                             m.stage = MushroomStage.full;
@@ -128,10 +139,10 @@ public class MushroomManager2 : MonoBehaviour
         m.startTime = Time.time;
         mushGrowth.Add(1);
         m.inIncubator = true;
-        // Debug.Log("START TIME ----" + m.startTime);
-        // Debug.Log("Name " + name);
-        // Debug.Log("Mushroom Growth " + m.mushGrowth);
-        // Debug.Log("In Incubator: " + m.inIncubator);
+        Debug.Log("START TIME ----" + m.startTime);
+        Debug.Log("Name " + name);
+        Debug.Log("Mushroom Growth " + m.mushGrowth);
+        Debug.Log("In Incubator: " + m.inIncubator);
 
         mushrooms.Add(m);
         mushArray = mushrooms.ToArray(); // Every time you add or delete something from the list, you MUSH call this line and Remove(m)
