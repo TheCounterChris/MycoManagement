@@ -10,14 +10,11 @@ public class RackManager : MonoBehaviour
 
     bool dishColliding = false;
     bool bodyColliding = false;
-    GameObject hand;
+    public GameObject thirdPersonHoldPos;
 
     GameObject dish;
 
-    void Start()
-    {
-        hand = GameObject.Find("Hand");
-    }
+    
 
     void Update()
     {
@@ -37,7 +34,7 @@ public class RackManager : MonoBehaviour
 
         if(bodyColliding == true)
         {
-            if(hand.transform.childCount == 0)
+            if(thirdPersonHoldPos.transform.childCount == 0)
             {
                 Debug.Log("Press E");
                 if(Input.GetKeyDown("t"))
@@ -49,8 +46,8 @@ public class RackManager : MonoBehaviour
                         if(slots[i].transform.childCount > 0)
                         {
                             GameObject firstDish = slots[i].transform.GetChild(0).gameObject;
-                            firstDish.transform.position = hand.transform.position;
-                            firstDish.transform.parent = hand.transform;
+                            firstDish.transform.position = thirdPersonHoldPos.transform.position;
+                            firstDish.transform.parent = thirdPersonHoldPos.transform;
                             firstDish.gameObject.GetComponent<PickUp>().enabled = true;
                             Debug.Log("picked up object");
 
