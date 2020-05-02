@@ -6,7 +6,11 @@ public class SingleDishManager : MonoBehaviour
 {
     GameObject emptyDish;//empty petri dish
     GameObject fullDish;//filled petri dish
-    GameObject grownDish;//petri dish with mycelium grown
+    //GameObject grownDish;//petri dish with mycelium grown
+
+    public Material emptyMat;
+    public Material fullMat;
+    public Material grownMat;
 
     float timer;
     bool timerUp;
@@ -16,7 +20,7 @@ public class SingleDishManager : MonoBehaviour
     {
         emptyDish = gameObject.transform.GetChild(0).gameObject;
         fullDish = gameObject.transform.GetChild(1).gameObject;
-        grownDish = gameObject.transform.GetChild(2).gameObject;
+        //grownDish = gameObject.transform.GetChild(2).gameObject;
     }
 
     void Update()
@@ -53,8 +57,9 @@ public class SingleDishManager : MonoBehaviour
 
     public void GrowDish()
     {
-        fullDish.SetActive(false);//turn off dish with gills
-        grownDish.SetActive(true);//turn on dish with gills and mycelium
+        fullDish.GetComponent<Renderer>().material = grownMat;
+        //fullDish.SetActive(false);//turn off dish with gills
+        //grownDish.SetActive(true);//turn on dish with gills and mycelium
         //grownDish.transform.parent = this.transform;
     }
 

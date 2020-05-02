@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public Transform hand;//hand position
+    public Transform thirdPersHoldPos;//hand position
     Transform firstPersHoldPos;//first person hold position
 
     bool colliding = false;//if hand is colliding with object
@@ -12,8 +12,8 @@ public class PickUp : MonoBehaviour
 
     void Start()
     {
-        hand = GameObject.Find("Hand").transform;
-        Debug.Log("HAND: " + hand);
+        thirdPersHoldPos = GameObject.Find("Hand").transform;
+        Debug.Log("HAND: " + thirdPersHoldPos);
 
         firstPersHoldPos = GameObject.Find("FirstPersHoldPos").transform;
         Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);
@@ -21,12 +21,12 @@ public class PickUp : MonoBehaviour
 
     void Update()
     {
-        if(hand.childCount == 0)//if the hand is not holding something
+        if(thirdPersHoldPos.childCount == 0)//if the hand is not holding something
         {
             pickedUp = false;//not picked up, empty hand
         }
 
-        if(hand.childCount > 0)//if the hand is holding something
+        if(thirdPersHoldPos.childCount > 0)//if the hand is holding something
         {
             pickedUp = true;//picked up, full hand
         }
@@ -77,8 +77,8 @@ public class PickUp : MonoBehaviour
             GetComponent<Collider>().isTrigger = true;//turn off collider so it doesn't hit stuff when moving
             GetComponent<Rigidbody>().isKinematic = true;//turn on kinematic just to make sure it doesn't hit stuff when moving        
             GetComponent<Rigidbody>().useGravity = false;//turn off gravity
-            this.transform.position = hand.position;//move object to hand
-            this.transform.parent = hand;//parent object to hand so it moves with robot
+            this.transform.position = thirdPersHoldPos.position;//move object to hand
+            this.transform.parent = thirdPersHoldPos;//parent object to hand so it moves with robot
 
             pickedUp = true;//object is picked up
 
@@ -88,7 +88,7 @@ public class PickUp : MonoBehaviour
 
     void PutDownObject()//put down
     {
-        if(this.transform.parent == hand)//if the object is indeed being held
+        if(this.transform.parent == thirdPersHoldPos)//if the object is indeed being held
         {
             this.transform.position = firstPersHoldPos.position;//move object infront of player
             this.transform.rotation = Quaternion.identity;
