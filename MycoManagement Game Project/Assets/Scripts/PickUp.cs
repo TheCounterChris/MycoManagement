@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public Transform thirdPersHoldPos;//hand position
-    public Transform firstPersHoldPos;//first person hold position
+    Transform thirdPersHoldPos;//hand position
+    Transform firstPersHoldPos;//first person hold position
 
-    public GameObject pickUpObject;
+    GameObject pickUpObject;
     bool colliding = false;//if hand is colliding with object
     bool pickedUp = false;//if hand is already holding something
 
@@ -15,10 +15,10 @@ public class PickUp : MonoBehaviour
     {
 
         pickUpObject = this.gameObject;
-        // thirdPersHoldPos = GameObject.Find("Hand").transform;
+        thirdPersHoldPos = GameObject.Find("ThirdPersHoldPos").transform;
         // Debug.Log("HAND: " + thirdPersHoldPos);
 
-        // firstPersHoldPos = GameObject.Find("FirstPersHoldPos").transform;
+        firstPersHoldPos = GameObject.Find("FirstPersHoldPos").transform;
         // Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);
     }
 
