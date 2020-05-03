@@ -579,6 +579,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Mushroom Growth-001" ID="{D3FBD7F0-8B15-4806-AA99-E1049E08F02C}" ShortID="1010862322">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>880</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -601,6 +608,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Mushroom Growth-002" ID="{7EBF7BE3-B51B-42C2-A593-B452C1E66F6D}" ShortID="508363212">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>530</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -623,6 +637,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Mushroom Growth-003" ID="{8C256C7A-6E71-4DEE-9EF8-706CF86CEE98}" ShortID="446186583">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>630</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -645,6 +666,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Mushroom Growth-004" ID="{229B4017-1BAA-4BEF-9399-13A6E66F649D}" ShortID="770735564">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>530</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -667,6 +695,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Mushroom Growth-005" ID="{BB9EB3A4-EF08-4270-AA9E-123CEDD97D7C}" ShortID="409611477">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>400</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -689,6 +724,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Mushroom Growth-006" ID="{B267AEF4-EE0C-4445-8955-6F9444EDA4FD}" ShortID="506728093">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>760</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -841,7 +883,7 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
-						<ActorMixer Name="Menu" ID="{89B4B919-4C56-421B-9731-7EFED2640B2E}" ShortID="602594817">
+						<ActorMixer Name="Menus, UI" ID="{89B4B919-4C56-421B-9731-7EFED2640B2E}" ShortID="602594817">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
