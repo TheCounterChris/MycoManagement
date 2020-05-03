@@ -11,6 +11,8 @@ public class MushroomManager2 : MonoBehaviour
 
     public GameObject lionSpore, lionBud, lionMed;
 
+    public GameObject matSpore, matBud, matMed;
+
     MushroomState[] mushArray;
 
     public GameObject IncubatorController;
@@ -89,6 +91,10 @@ public class MushroomManager2 : MonoBehaviour
                             {
                                 ChangeMushModel(lionSpore, lionBud);
                             }
+                            if (m.Name == "Matsutake")
+                            {
+                                ChangeMushModel(matSpore, matBud);
+                            }
                             break;
                         case 20:
                             m.stage = MushroomStage.medium;
@@ -99,7 +105,11 @@ public class MushroomManager2 : MonoBehaviour
                             if (m.Name == "Lionsmane")
                             {
                                 ChangeMushModel(lionBud, lionMed);
-                            }                            
+                            }               
+                            if (m.Name == "Matsutake")
+                            {
+                                ChangeMushModel(matBud, matMed);
+                            }             
                             break;
                         case 30:
                             m.stage = MushroomStage.full;
