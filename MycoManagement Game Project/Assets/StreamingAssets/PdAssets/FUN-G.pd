@@ -1,7 +1,7 @@
 #N canvas 361 -385 638 293 10;
 #X obj 199 40 sig~;
 #X obj 200 24 hsl 64 12 0 1 0 0 empty empty speed 16 6 1 8 -262144
--1 -1 12700 1;
+-1 -1 9700 1;
 #N canvas 360 -1032 1280 941 turbine 1;
 #X obj 13 173 osc~;
 #X obj 52 172 osc~;
@@ -296,28 +296,30 @@
 #X restore 154 68 pd burn;
 #X obj 25 68 +~;
 #X obj 25 87 lop~ 1000;
-#X obj 154 49 lop~ 3;
 #X obj 25 107 *~ 0.2;
 #X obj 154 90 *~;
-#X obj 215 71 r grounded;
-#X obj 214 97 hsl 64 12 0 1 0 0 empty empty empty 16 6 1 8 -262144
--1 -1 12700 1;
-#X obj 25 47 *~ 0.01;
-#X connect 0 0 9 0;
+#X obj 226 63 r grounded;
+#X obj 215 111 hsl 64 12 0 5 0 0 empty empty empty 16 6 1 8 -262144
+-1 -1 5900 1;
+#X obj 154 49 lop~ 2;
+#X obj 25 47 *~ 0.05;
+#X obj 209 86 * 2;
+#X connect 0 0 13 0;
 #X connect 1 0 0 0;
 #X connect 1 0 6 1;
 #X connect 1 0 2 1;
 #X connect 2 0 14 0;
 #X connect 4 0 1 0;
-#X connect 5 0 10 0;
-#X connect 6 0 11 0;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
 #X connect 7 0 8 0;
-#X connect 8 0 10 0;
-#X connect 9 0 2 0;
-#X connect 9 0 6 0;
-#X connect 10 0 3 0;
-#X connect 10 0 3 1;
-#X connect 11 0 7 1;
-#X connect 12 0 11 1;
-#X connect 13 0 11 1;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;
+#X connect 9 0 3 1;
+#X connect 10 0 7 1;
+#X connect 11 0 15 0;
+#X connect 12 0 10 1;
+#X connect 13 0 2 0;
+#X connect 13 0 6 0;
 #X connect 14 0 7 0;
+#X connect 15 0 10 1;
