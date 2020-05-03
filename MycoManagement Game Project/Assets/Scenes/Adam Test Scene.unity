@@ -1041,8 +1041,7 @@ PrefabInstance:
       propertyPath: orthographic
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9073777631515166724, guid: c7898d5c66cc6a8449b9bbb7109ff6ca, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7898d5c66cc6a8449b9bbb7109ff6ca, type: 3}
 --- !u!1001 &927035518
 PrefabInstance:
@@ -1308,6 +1307,31 @@ MonoBehaviour:
   RotateAroundPlayer: 0
   RotSpeed: 10
   SmoothFactor: 0.5
+--- !u!114 &1032574067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032574058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e993afc06a6e834baef99cd00937344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7360d0b59b320ac4b9764bbc1cbcbebb,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1063083022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7754596120407068562, guid: d0ca59dd45c382b4b9b49cec2e5f9ba8,

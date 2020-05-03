@@ -9,6 +9,7 @@ public class PickUp2 : MonoBehaviour
 
     bool colliding = false;//if hand is colliding with object
     bool pickedUp = false;//if hand is already holding something
+    public GameObject pickUpObject;
 
     void Start()
     {
@@ -16,7 +17,9 @@ public class PickUp2 : MonoBehaviour
         Debug.Log("HAND: " + hand);
 
         firstPersHoldPos = GameObject.Find("FirstPersHoldPos").transform;
-        Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);       
+        Debug.Log("FIRST PERS HOLD POS: " + firstPersHoldPos);    
+        
+        pickUpObject = this.gameObject;   
     }
 
     void Update()
@@ -42,6 +45,7 @@ public class PickUp2 : MonoBehaviour
                 {
                     // Debug.Log("Pressed button to pick up object");
                     PickUpObject();//pick up the object
+                    AkSoundEngine.PostEvent("PickUp", pickUpObject);
                 }
             }
             else//not in position to pick up
