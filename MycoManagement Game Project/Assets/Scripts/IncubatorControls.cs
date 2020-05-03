@@ -28,7 +28,7 @@ public class IncubatorControls : MonoBehaviour
     {
         incubatorTemp = incubatorTempSlider.value;
         incubatorHumidity = incubatorHumiditySlider.value;
-        tempText.text = incubatorTemp.ToString();
-        humText.text = incubatorHumidity.ToString();
+        tempText.text = incubatorTemp.ToString("F1") + "°";
+        humText.text = incubatorHumidity.ToString("0") + "%";
     }
 }
