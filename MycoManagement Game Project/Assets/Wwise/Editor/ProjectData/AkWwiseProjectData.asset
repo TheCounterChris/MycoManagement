@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a94c132458f1b342979151e6287bf2eb
     GuidInternal: 
-    m_lastTime: -8586131574549222990
+    m_lastTime: -8586130944383172245
     List:
     - name: SFX
       guid: bef06a5e3b69de4aa18a5e1227ceb69d
@@ -56,8 +56,20 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 8b72dd817d40004eb9613137cbcae8f7
     GuidInternal: 
-    m_lastTime: -8586131658286964002
-    List: []
+    m_lastTime: -8586130950469595796
+    List:
+    - name: PickUp
+      guid: b364ba94dd45b74680549a7686a18545
+      id: 3978245845
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PickUp
+        ObjectType: 3
+      Path: Default Work Unit\PickUp
+      maxAttenuation: 0
+      maxDuration: 0.268231
+      minDuration: 0.268231
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -89,6 +101,8 @@ MonoBehaviour:
   ExpandedItems:
   - /MycoManagement Game Project_WwiseProject
   - /MycoManagement Game Project_WwiseProject/Auxiliary Busses
+  - /MycoManagement Game Project_WwiseProject/Events
+  - /MycoManagement Game Project_WwiseProject/Events/Default Work Unit
   - /MycoManagement Game Project_WwiseProject/SoundBanks
   - /MycoManagement Game Project_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1

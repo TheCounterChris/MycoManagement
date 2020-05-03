@@ -15,6 +15,16 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3978245845" Name="PickUp" ObjectPath="\Events\Default Work Unit\PickUp" DurationType="OneShot" DurationMin="0.268231" DurationMax="0.268231">
+					<IncludedMemoryFiles>
+						<File Id="357254741" Language="SFX">
+							<ShortName>srattle3___m.wav</ShortName>
+							<Path>SFX\srattle3___m_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>

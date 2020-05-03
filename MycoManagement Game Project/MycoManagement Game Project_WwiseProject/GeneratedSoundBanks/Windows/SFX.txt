@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3978245845	PickUp			\Default Work Unit\PickUp	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	357254741	srattle3___m	C:\Users\adam_\Documents\Unity\MycoManagement\MycoManagement Game Project\MycoManagement Game Project_WwiseProject\.cache\Windows\SFX\srattle3___m_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\srattle3___m		23722
+

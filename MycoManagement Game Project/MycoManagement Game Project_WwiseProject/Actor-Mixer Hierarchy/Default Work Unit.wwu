@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}" SchemaVersion="97">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="srattle3___m" ID="{015ACFB5-81CF-4071-9532-0B905BA9F433}" ShortID="875448264">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="srattle3___m" ID="{A0637D7F-9D71-4747-84E6-64AD28B40EB3}">
+							<Language>SFX</Language>
+							<AudioFile>srattle3___m.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="357254741"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="srattle3___m" ID="{A0637D7F-9D71-4747-84E6-64AD28B40EB3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
