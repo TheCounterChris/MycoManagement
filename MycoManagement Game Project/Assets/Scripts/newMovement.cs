@@ -9,6 +9,13 @@ public class newMovement : MonoBehaviour
     public float rotSpeed = 5.0f;//how fast he turns
     public float sprintMultiplier = 2f;
     float fastSpeed;
+
+    bool isGrounded;
+
+    public bool isMoving;
+
+    public LibPdInstance pdPatch;
+
     public Rigidbody robotRigid;//rigid body of the robot, what we are actually moving
     Vector3 movement;//to store input
 
@@ -29,17 +36,30 @@ public class newMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");//get east west movement
         movement.z = Input.GetAxisRaw("Vertical");//get north south movement
-        
-        currentSpeed = Input.GetKey(KeyCode.LeftShift) ? fastSpeed : normalSpeed;        
+
+        currentSpeed = Input.GetKey(KeyCode.LeftShift) ? fastSpeed : normalSpeed;
 
         if (movement != Vector3.zero)
         {
             animator.SetBool("Moving", true);
             animator.speed = Input.GetKey(KeyCode.LeftShift) ? animFastSpeed : animNormalSpeed;
+            pdPatch.SendFloat("velocity", Mathf.Clamp(currentSpeed / 30, 0, 1));
+            isMoving = true;
+            if(isGrounded)
+            {
+                pdPatch.SendFloat("grounded", 1);
+            }
+            if (!isGrounded)
+            {
+                pdPatch.SendFloat("grounded", 0);
+            }
         }
         else
         {
             animator.SetBool("Moving", false);
+            pdPatch.SendFloat("velocity", 0);
+
+            isMoving = false;
         }
     }
 
@@ -53,6 +73,34 @@ public class newMovement : MonoBehaviour
         {
             Quaternion qTo = Quaternion.LookRotation(movement);//turn the input into rotation data
             transform.rotation = Quaternion.Slerp(transform.rotation, qTo, rotSpeed * Time.fixedDeltaTime);//rotate towards new direction over time as set by rotSpeed
+        }
+
+        if (Input.GetKeyDown("space") && isGrounded)
+        {
+            Vector3 up = transform.TransformDirection(Vector3.up);
+            robotRigid.AddForce(up * 5, ForceMode.Impulse);
+        }
+
+        if (Input.GetButtonDown("Camera"))
+        {
+            pdPatch.SendBang("cam");
+            Debug.Log("camera");
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name == "Mesh Collider")
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.name == "Mesh Collider")
+        {
+            isGrounded = false;
         }
     }
 }//class
