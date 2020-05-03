@@ -13,6 +13,10 @@ public class IncubatorControls : MonoBehaviour
     public float incubatorTemp;
 
     public float incubatorHumidity;
+
+    public Text tempText;
+    public Text humText;
+
     void Start()
     {
         incubatorTemp = incubatorTempSlider.value;
@@ -24,5 +28,7 @@ public class IncubatorControls : MonoBehaviour
     {
         incubatorTemp = incubatorTempSlider.value;
         incubatorHumidity = incubatorHumiditySlider.value;
+        tempText.text = incubatorTemp.ToString();
+        humText.text = incubatorHumidity.ToString();
     }
 }
