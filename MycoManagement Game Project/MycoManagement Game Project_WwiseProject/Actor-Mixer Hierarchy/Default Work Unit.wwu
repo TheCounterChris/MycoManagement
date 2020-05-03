@@ -714,6 +714,84 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
+						<ActorMixer Name="UI" ID="{FA920578-D04D-4486-8F62-D826C93D39F3}" ShortID="976078635">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI Blip 1" ID="{1EA0FCD3-4749-4C17-946A-F29726C1B5FA}" ShortID="236022695">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI Blip 1" ID="{F4429106-F45B-456B-84A7-23BDCDAE7A32}">
+											<Language>SFX</Language>
+											<AudioFile>UI Blip 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="274477245"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI Blip 1" ID="{F4429106-F45B-456B-84A7-23BDCDAE7A32}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI Blip 2" ID="{B5F20CB3-495F-47C8-967A-A9680C341A52}" ShortID="597674055">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI Blip 2" ID="{F04334F4-5210-4EA9-976D-3BD6C9853FC0}">
+											<Language>SFX</Language>
+											<AudioFile>UI Blip 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="619626092"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI Blip 2" ID="{F04334F4-5210-4EA9-976D-3BD6C9853FC0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI Blip 3" ID="{8B21BA80-183C-4FE7-8419-B451841C51AD}" ShortID="587968557">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI Blip 3" ID="{90A1A3E1-C010-43CF-8233-D9FCB0B317D2}">
+											<Language>SFX</Language>
+											<AudioFile>UI Blip 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="570165901"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI Blip 3" ID="{90A1A3E1-C010-43CF-8233-D9FCB0B317D2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Music" ID="{E9D720EB-B8C5-407B-BBD3-66CC6B1E4744}" ShortID="565536520">
@@ -726,10 +804,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="PlaceholderMusic_CheesyChiptunes" ID="{29579645-B728-4FD4-B49B-D4E981E5DF28}" ShortID="771300943">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
+						<ActorMixer Name="Main Game" ID="{453732BC-7FA5-4CC7-BC2B-78F43BEC2F7C}" ShortID="578482212">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -739,18 +814,95 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="PlaceholderMusic_CheesyChiptunes" ID="{16ABB5B4-FF00-44F9-892D-7DB81AB1658A}">
-									<Language>SFX</Language>
-									<AudioFile>PlaceholderMusic_CheesyChiptunes.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="217415080"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<Sound Name="PlaceholderMusic_CheesyChiptunes" ID="{29579645-B728-4FD4-B49B-D4E981E5DF28}" ShortID="771300943">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlaceholderMusic_CheesyChiptunes" ID="{16ABB5B4-FF00-44F9-892D-7DB81AB1658A}">
+											<Language>SFX</Language>
+											<AudioFile>PlaceholderMusic_CheesyChiptunes.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="217415080"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlaceholderMusic_CheesyChiptunes" ID="{16ABB5B4-FF00-44F9-892D-7DB81AB1658A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PlaceholderMusic_CheesyChiptunes" ID="{16ABB5B4-FF00-44F9-892D-7DB81AB1658A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</ActorMixer>
+						<ActorMixer Name="Menu" ID="{89B4B919-4C56-421B-9731-7EFED2640B2E}" ShortID="602594817">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MenuAmbience" ID="{F4753A67-C2D4-4702-89BB-62C17482194C}" ShortID="560888662">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MenuAmbience" ID="{5710DA13-BE01-4ACB-9FA8-926134D0749B}">
+											<Language>SFX</Language>
+											<AudioFile>MenuAmbience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="707554569"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MenuAmbience" ID="{5710DA13-BE01-4ACB-9FA8-926134D0749B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PauseAmbience" ID="{2C5758D3-19A6-4269-9C66-BBB272450BF9}" ShortID="634972332">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PauseAmbience" ID="{4E5D08CC-C76F-4E0F-8898-B0BA5287CB68}">
+											<Language>SFX</Language>
+											<AudioFile>PauseAmbience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="539298054"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PauseAmbience" ID="{4E5D08CC-C76F-4E0F-8898-B0BA5287CB68}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
