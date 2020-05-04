@@ -887,6 +887,34 @@ Transform:
   m_Father: {fileID: 1231084933}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &405550027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 1a016dc68119b4044b21c39c3f33b776,
+    type: 3}
+  m_PrefabInstance: {fileID: 1833232023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &405550030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405550027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523addee406343e40aeacdccc9a3406b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &463069222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,6 +1495,10 @@ GameObject:
   m_Component:
   - component: {fileID: 745330391}
   - component: {fileID: 745330392}
+  - component: {fileID: 745330395}
+  - component: {fileID: 745330394}
+  - component: {fileID: 745330393}
+  - component: {fileID: 745330396}
   m_Layer: 0
   m_Name: ' Camera Tings'
   m_TagString: Untagged
@@ -1498,6 +1530,101 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745330390}
   m_Enabled: 0
+--- !u!114 &745330393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745330390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e993afc06a6e834baef99cd00937344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7360d0b59b320ac4b9764bbc1cbcbebb,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &745330394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745330390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3a1bcb46936cb43a42f799fd5088cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &745330395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745330390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523addee406343e40aeacdccc9a3406b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &745330396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745330390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6ae0616e447d642af1eb225023e463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1e71be3db16bc194f8b61eb3778dc9e3,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
 --- !u!1 &800142430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,12 +3028,12 @@ PrefabInstance:
     - target: {fileID: 5523328099276409391, guid: b00912a1accd7d04aaaed04eac0a7ab0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5523328099276409387, guid: b00912a1accd7d04aaaed04eac0a7ab0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.4
+      value: -26.4
       objectReference: {fileID: 0}
     - target: {fileID: 5523328099276409387, guid: b00912a1accd7d04aaaed04eac0a7ab0,
         type: 3}
@@ -2916,7 +3043,7 @@ PrefabInstance:
     - target: {fileID: 5523328099276409387, guid: b00912a1accd7d04aaaed04eac0a7ab0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.28
+      value: -21.8
       objectReference: {fileID: 0}
     - target: {fileID: 5523328099276409387, guid: b00912a1accd7d04aaaed04eac0a7ab0,
         type: 3}
@@ -4679,7 +4806,6 @@ GameObject:
   - component: {fileID: 1904651462}
   - component: {fileID: 1904651466}
   - component: {fileID: 1904651463}
-  - component: {fileID: 1904651467}
   m_Layer: 0
   m_Name: Third Person Camera
   m_TagString: MainCamera
@@ -4819,31 +4945,6 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &1904651467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904651461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e993afc06a6e834baef99cd00937344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7360d0b59b320ac4b9764bbc1cbcbebb,
-      type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!1 &1926060897
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,7 +52,34 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2997160352" Name="ShroomGrowth" ObjectPath="\Events\Default Work Unit\ShroomGrowth" DurationType="OneShot" DurationMin="40.680195" DurationMax="53.677841"/>
+				<Event Id="2997160352" Name="ShroomGrowth" ObjectPath="\Events\Default Work Unit\ShroomGrowth" DurationType="OneShot" DurationMin="40.680195" DurationMax="53.677841">
+					<IncludedMemoryFiles>
+						<File Id="97530045" Language="SFX">
+							<ShortName>Mushroom Growth-006.wav</ShortName>
+							<Path>SFX\Mushroom Growth-006_10C4C929.wem</Path>
+						</File>
+						<File Id="115924959" Language="SFX">
+							<ShortName>Mushroom Growth-004.wav</ShortName>
+							<Path>SFX\Mushroom Growth-004_10C4C929.wem</Path>
+						</File>
+						<File Id="168102941" Language="SFX">
+							<ShortName>Mushroom Growth-002.wav</ShortName>
+							<Path>SFX\Mushroom Growth-002_10C4C929.wem</Path>
+						</File>
+						<File Id="185348440" Language="SFX">
+							<ShortName>Mushroom Growth-003.wav</ShortName>
+							<Path>SFX\Mushroom Growth-003_10C4C929.wem</Path>
+						</File>
+						<File Id="252063922" Language="SFX">
+							<ShortName>Mushroom Growth-005.wav</ShortName>
+							<Path>SFX\Mushroom Growth-005_10C4C929.wem</Path>
+						</File>
+						<File Id="491241249" Language="SFX">
+							<ShortName>Mushroom Growth-001.wav</ShortName>
+							<Path>SFX\Mushroom Growth-001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="1517852" Language="SFX">
