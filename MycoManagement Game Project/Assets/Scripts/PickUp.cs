@@ -40,10 +40,10 @@ public class PickUp : MonoBehaviour
         {
             if(colliding == true)//something to pick up
             {
-                Debug.Log("No held item and in position to pick up");
+                // Debug.Log("No held item and in position to pick up");
                 if(Input.GetButtonDown("Interact"))//get input key
                 {
-                    Debug.Log("Pressed button to pick up object");
+                    // Debug.Log("Pressed button to pick up object");
                     PickUpObject();//pick up the object
                     AkSoundEngine.PostEvent("PickUp", pickUpObject);
                 }
@@ -52,7 +52,7 @@ public class PickUp : MonoBehaviour
             {
                 if(Input.GetButtonDown("Interact"))//get input key
                 {
-                    Debug.Log("Pressed button to pick up object, but not in position to pick up object");
+                    // Debug.Log("Pressed button to pick up object, but not in position to pick up object");
                 }
             }
         }
@@ -60,7 +60,7 @@ public class PickUp : MonoBehaviour
         {
             if(Input.GetButtonDown("Put Down"))//input to put down object
             {
-                Debug.Log("Pressed button to put down object");
+                // Debug.Log("Pressed button to put down object");
                 PutDownObject();//put down object
             }
         }
@@ -68,7 +68,7 @@ public class PickUp : MonoBehaviour
         {
             if(Input.GetButtonDown("Interact"))
             {
-                Debug.Log("There is no held item");
+                // Debug.Log("There is no held item");
             }
         }
         
@@ -86,7 +86,7 @@ public class PickUp : MonoBehaviour
 
             pickedUp = true;//object is picked up
 
-            Debug.Log("Object should be picked up");
+            // Debug.Log("Object should be picked up");
         }
     }
 
@@ -103,7 +103,7 @@ public class PickUp : MonoBehaviour
 
             pickedUp = false;//not being held
 
-            Debug.Log("Object should be put down");
+            // Debug.Log("Object should be put down");
         
             colliding = false;//no longer colliding
         //}
@@ -113,18 +113,18 @@ public class PickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "PickUp")//if colliding with the pick up space
         {
-            Debug.Log("Entered pick up space");
+            // Debug.Log("Entered pick up space");
             colliding = true;//turn on colliding so that it can be picked up
         }
         else{
-            Debug.Log("Entered other collider");
+            // Debug.Log("Entered other collider");
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.tag == "PickUp")//left the pick up space
         {
-            Debug.Log("left pick up space");
+            // Debug.Log("left pick up space");
             colliding = false;//turn off colliding, cannot pe picked up
         }
     }
