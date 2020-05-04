@@ -93,6 +93,7 @@ public class newMovement : MonoBehaviour
         if (other.gameObject.name == "Mesh Collider")
         {
             isGrounded = true;
+            AkSoundEngine.PostEvent("Impact", other.gameObject);
         }
     }
 
