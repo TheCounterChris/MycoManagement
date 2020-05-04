@@ -25,7 +25,7 @@ public class IncubatorControls : MonoBehaviour
     {
         incubatorTemp = incubatorTempSlider.value;
         incubatorHumidity = incubatorHumiditySlider.value;
-        InvokeRepeating("Decrease", 2, 2);
+        InvokeRepeating("Decrease", 2, 4);
     }
 
     // Update is called once per frame
