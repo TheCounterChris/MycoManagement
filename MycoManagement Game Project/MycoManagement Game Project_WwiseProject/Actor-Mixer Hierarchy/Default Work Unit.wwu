@@ -38,56 +38,6 @@
 								<ActiveSource Name="Room Tone Generic" ID="{1EFD00DF-E5E9-4D16-93BD-ABF990698B3B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="RoomToneFansAndClicks" ID="{92ED1D41-8DB1-42AF-BF2E-52B65134382C}" ShortID="636550883">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="RoomToneFansAndClicks" ID="{8232DBB0-8EB1-40CB-BE27-708D6B38A419}">
-									<Language>SFX</Language>
-									<AudioFile>RoomToneFansAndClicks.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="171298342"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="RoomToneFansAndClicks" ID="{8232DBB0-8EB1-40CB-BE27-708D6B38A419}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Surface Wind" ID="{103845C6-DF3B-4D59-B1E3-E656AD128ADF}" ShortID="403240031">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Surface Wind" ID="{8CF5705D-51E7-4B31-B9A2-4A36517D0344}">
-									<Language>SFX</Language>
-									<AudioFile>Surface Wind.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="575284872"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Surface Wind" ID="{8CF5705D-51E7-4B31-B9A2-4A36517D0344}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<ActorMixer Name="Generators" ID="{96CEA241-9D6A-4D27-9DED-CECACBF0700E}" ShortID="174903931">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -121,31 +71,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Generator A" ID="{B8B98F44-0E2A-4E00-852B-AFD7694E06E8}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Generator B" ID="{37A23739-8051-4941-9784-751D42A41018}" ShortID="938718889">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Generator B" ID="{E0CE1A21-AF01-4B73-BB71-B45AE4FF0B49}">
-											<Language>SFX</Language>
-											<AudioFile>Generator B.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="6500425"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Generator B" ID="{E0CE1A21-AF01-4B73-BB71-B45AE4FF0B49}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1286,68 +1211,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="MycoManagement_GameMusicLoop" ID="{314DFDB7-4891-4A3F-B4B4-9CFABF7B718B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</ActorMixer>
-						<ActorMixer Name="Menus, UI" ID="{89B4B919-4C56-421B-9731-7EFED2640B2E}" ShortID="602594817">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="MenuAmbience" ID="{F4753A67-C2D4-4702-89BB-62C17482194C}" ShortID="560888662">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="MenuAmbience" ID="{5710DA13-BE01-4ACB-9FA8-926134D0749B}">
-											<Language>SFX</Language>
-											<AudioFile>MenuAmbience.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="707554569"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="MenuAmbience" ID="{5710DA13-BE01-4ACB-9FA8-926134D0749B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="PauseAmbience" ID="{2C5758D3-19A6-4269-9C66-BBB272450BF9}" ShortID="634972332">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="PauseAmbience" ID="{4E5D08CC-C76F-4E0F-8898-B0BA5287CB68}">
-											<Language>SFX</Language>
-											<AudioFile>PauseAmbience.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="539298054"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="PauseAmbience" ID="{4E5D08CC-C76F-4E0F-8898-B0BA5287CB68}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
