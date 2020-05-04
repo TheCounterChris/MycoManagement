@@ -83,7 +83,7 @@ public class MushroomManager2 : MonoBehaviour
                         case 0:
                             m.stage = MushroomStage.spore;
                             break;
-                        case 3:
+                        case 25:
                             m.stage = MushroomStage.budding;
                             if (m.Name == "Cordyceps")
                             {
@@ -98,7 +98,7 @@ public class MushroomManager2 : MonoBehaviour
                                 ChangeMushModel(matSpore, matBud);
                             }
                             break;
-                        case 6:
+                        case 50:
                             m.stage = MushroomStage.medium;
                             if (m.Name == "Cordyceps")
                             {
@@ -113,7 +113,7 @@ public class MushroomManager2 : MonoBehaviour
                                 ChangeMushModel(matBud, matMed);
                             }
                             break;
-                        case 8:
+                        case 100:
                             m.stage = MushroomStage.full;
                             if (m.Name == "Cordyceps")
                             {
@@ -128,7 +128,7 @@ public class MushroomManager2 : MonoBehaviour
                                 ChangeMushModel(matMed, matBud);
                             }
                             break;
-                        case 10:
+                        case 125:
                             m.stage = MushroomStage.dying;
                             if (m.Name == "Cordyceps")
                             {
@@ -231,7 +231,10 @@ public class MushroomManager2 : MonoBehaviour
                 Debug.Log("Mushroom Growth ---------" + m.mushGrowth);
                 Debug.Log("Potency ---------" + m.potency);
                 // Debug.Log("Humidity -------" + m.humidity);
-                // Debug.Log("POINTS ------" + m.potency * m.mushGrowth * m.humidity);
+                if (m.mushGrowth >= 75)
+                    Debug.Log("POINTS ------" + 1000*(75 / m.potency * m.mushGrowth));
+                if (m.mushGrowth <= 75)
+                    Debug.Log("POINTS ------" + 1000*(m.potency * m.mushGrowth)/75);
                 mushrooms.Remove(m);
                 mushArray = mushrooms.ToArray();
                 break;

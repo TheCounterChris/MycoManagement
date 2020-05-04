@@ -398,6 +398,42 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Mushroom Interaction-001" ID="{DAF3305A-639D-4EDF-A1AC-0092898D18B8}" ShortID="720019712">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>32</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{895C95FA-681A-4370-A485-89D7762B9D27}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-16"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{35398A5D-6058-4C43-82F0-86CA4EAE271F}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="51"/>
+																			<Property Name="Min" Type="Real64" Value="-51"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-17</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -468,6 +504,18 @@
 										<RandomSequenceContainer Name="MushroomCutting_RandomContainer" ID="{CA44D642-0AE2-46D2-BC37-327A3ACABA14}" ShortID="136114528">
 											<PropertyList>
 												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{25629843-DAB9-4998-AB45-BBFA17A88012}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="51"/>
+																	<Property Name="Min" Type="Real64" Value="-51"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 												<Property Name="UserAuxSendVolume0" Type="Real64">
 													<ValueList>
@@ -493,6 +541,21 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="ScissorSnips - 1" ID="{092739F9-6852-452F-9FE9-671850D4B78A}" ShortID="754329570">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{C81F59BD-AEFC-4583-A016-515082EFFF4C}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="51"/>
+																			<Property Name="Min" Type="Real64" Value="-51"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -515,6 +578,21 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="ScissorSnips - 2" ID="{1EE58A5D-31F2-48D4-9077-EF51DCCD595C}" ShortID="59025333">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{4124DFE9-766A-47AC-86A6-323C9C610D1F}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="50"/>
+																			<Property Name="Min" Type="Real64" Value="-50"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>

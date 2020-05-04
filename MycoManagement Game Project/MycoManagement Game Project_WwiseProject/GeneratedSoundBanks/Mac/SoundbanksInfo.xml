@@ -16,6 +16,14 @@
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
+				<Event Id="513390133" Name="Bag" ObjectPath="\Events\Default Work Unit\Bag" DurationType="OneShot" DurationMin="65.666611" DurationMax="69.651772">
+					<IncludedMemoryFiles>
+						<File Id="225050575" Language="SFX">
+							<ShortName>Mushroom Interaction-001.wav</ShortName>
+							<Path>SFX\Mushroom Interaction-001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="820567678" Name="GameMusicLoop" ObjectPath="\Events\Default Work Unit\GameMusicLoop" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="453542826" Language="SFX">
@@ -40,7 +48,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3978245845" Name="PickUp" ObjectPath="\Events\Default Work Unit\PickUp" DurationType="OneShot" DurationMin="1.264422" DurationMax="1.264422">
+				<Event Id="3978245845" Name="PickUp" ObjectPath="\Events\Default Work Unit\PickUp" DurationType="OneShot" DurationMin="1.227717" DurationMax="1.302224">
 					<IncludedMemoryFiles>
 						<File Id="145869733" Language="SFX">
 							<ShortName>ScissorSnips - 1.wav</ShortName>

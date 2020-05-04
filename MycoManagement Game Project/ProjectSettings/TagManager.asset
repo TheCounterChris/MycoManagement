@@ -15,6 +15,7 @@ TagManager:
   - Rack
   - Slot
   - Dish
+  - Cooked
   layers:
   - Default
   - TransparentFX

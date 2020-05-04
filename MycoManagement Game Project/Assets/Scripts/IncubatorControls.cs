@@ -25,7 +25,7 @@ public class IncubatorControls : MonoBehaviour
     {
         incubatorTemp = incubatorTempSlider.value;
         incubatorHumidity = incubatorHumiditySlider.value;
-        InvokeRepeating("Decrease", 2, 5);
+        InvokeRepeating("Decrease", 2, 2);
     }
 
     // Update is called once per frame
@@ -39,10 +39,12 @@ public class IncubatorControls : MonoBehaviour
 
     void Decrease()
     {
-        temp = (float)Random.Range(1, 100) / 100;
-        humid = (float)Random.Range(1, 100) / 100;
+        temp = Mathf.Clamp(((float)Random.Range(1, 100) / 100), 0f, 1f);
+        humid = Mathf.Clamp(((float)Random.Range(1, 100) / 100), 0f, 1f);
         incubatorTempSlider.value -= temp;
         incubatorHumiditySlider.value -= humid;
+        Debug.Log("TEMP " + temp);
+        Debug.Log("HUMID " + humid);
         // incubatorTempSlider.value -= 0.1f*(1+Mathf.Sin(Mathf.Repeat((Time.time), 6)));
     }
 }

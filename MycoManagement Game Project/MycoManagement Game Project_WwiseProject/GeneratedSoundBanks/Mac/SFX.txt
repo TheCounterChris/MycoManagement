@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	513390133	Bag			\Default Work Unit\Bag	
 	820567678	GameMusicLoop			\Default Work Unit\GameMusicLoop	
 	2997160352	ShroomGrowth			\Default Work Unit\ShroomGrowth	
 	3257506471	Impact			\Default Work Unit\Impact	

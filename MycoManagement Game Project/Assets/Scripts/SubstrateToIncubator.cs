@@ -35,6 +35,7 @@ public class SubstrateToIncubator : MonoBehaviour
                 //subBag.gameObject.transform.rotation = Quaternion.identity;
                 subBag.gameObject.GetComponent<PickUp>().enabled = false;
                 bagReady = false;
+                AkSoundEngine.PostEvent("Bag", subBag);
             }
         }
 
