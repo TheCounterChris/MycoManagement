@@ -41,6 +41,7 @@ public class MushroomManager2 : MonoBehaviour
         {
             foreach (MushroomState m in mushArray)
             {
+                // Debug.Log(m.inIncubator);
                 if (m.inIncubator == true)
                 {
                     //  Calculates growthModifier in relation to ideal temperature of 25 degrees
@@ -74,15 +75,15 @@ public class MushroomManager2 : MonoBehaviour
 
                     // // stage = Mathf.Clamp(stage, 0, 5);
                     // // Checks if this stage is earlier then the mushroom stage
-                    // Debug.Log("Mushroom Name -----------" + m.Name);
-                    // Debug.Log("Mushroom Growth -----------" + mushGrowth[mushrooms.IndexOf(m)]); 
+                    // Debug.Log("Mushroom Name ------" + m.Name);
+                    // Debug.Log("Mushroom Growth ------" + mushGrowth[mushrooms.IndexOf(m)]);
 
                     switch ((int)mushGrowth[mushrooms.IndexOf(m)])
                     {
                         case 0:
                             m.stage = MushroomStage.spore;
                             break;
-                        case 10:
+                        case 3:
                             m.stage = MushroomStage.budding;
                             if (m.Name == "Cordyceps")
                             {
@@ -97,7 +98,7 @@ public class MushroomManager2 : MonoBehaviour
                                 ChangeMushModel(matSpore, matBud);
                             }
                             break;
-                        case 20:
+                        case 6:
                             m.stage = MushroomStage.medium;
                             if (m.Name == "Cordyceps")
                             {
@@ -112,15 +113,39 @@ public class MushroomManager2 : MonoBehaviour
                                 ChangeMushModel(matBud, matMed);
                             }
                             break;
-                        case 30:
+                        case 8:
                             m.stage = MushroomStage.full;
+                            if (m.Name == "Cordyceps")
+                            {
+                                ChangeMushModel(cordyMed, cordyBud);
+                            }
+                            if (m.Name == "Lionsmane")
+                            {
+                                ChangeMushModel(lionMed, lionBud);
+                            }
+                            if (m.Name == "Matsutake")
+                            {
+                                ChangeMushModel(matMed, matBud);
+                            }
                             break;
-                        case 40:
+                        case 10:
                             m.stage = MushroomStage.dying;
+                            if (m.Name == "Cordyceps")
+                            {
+                                ChangeMushModel(cordyBud, cordySpore);
+                            }
+                            if (m.Name == "Lionsmane")
+                            {
+                                ChangeMushModel(lionBud, lionSpore);
+                            }
+                            if (m.Name == "Matsutake")
+                            {
+                                ChangeMushModel(matBud, matSpore);
+                            }
                             break;
-                        case 50:
-                            m.stage = MushroomStage.dead;
-                            break;
+                        // case 50:
+                        //     m.stage = MushroomStage.dead;
+                        //     break;
 
                         default:
                             break;
@@ -152,6 +177,7 @@ public class MushroomManager2 : MonoBehaviour
         m.startTime = Time.time;
         mushGrowth.Add(1);
         m.inIncubator = true;
+        // Debug.Log(m);
         Debug.Log("START TIME ----" + m.startTime);
         Debug.Log("Name " + name);
         Debug.Log("Mushroom Growth " + m.mushGrowth);
@@ -171,9 +197,9 @@ public class MushroomManager2 : MonoBehaviour
                 m.mushGrowth = mushGrowth[mushrooms.IndexOf(m)];
                 // m.stage = ;
                 m.inIncubator = false;
-                // Debug.Log(mushrooms.IndexOf(m));
+                Debug.Log(mushrooms.IndexOf(m));
                 Debug.Log("Name: " + name);
-                // Debug.Log("In Incubator: " + m.inIncubator);
+                Debug.Log("In Incubator: " + m.inIncubator);
                 Debug.Log("Stage: " + m.stage);
                 Debug.Log("Mushroom Growth: " + m.mushGrowth);
                 Debug.Log("Potency: " + m.potency);

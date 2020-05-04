@@ -15,7 +15,7 @@ public class SubstrateToGenerator : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Contains("Substrate"))
+        if (other.tag.Contains("Cooked"))
         {
             shroomName = other.name;
             // Debug.Log(shroom.);

@@ -42,13 +42,13 @@ public class SubstrateToIncubator : MonoBehaviour
         {
             if(thirdPersonHoldPos.transform.childCount == 0)
             {
-                Debug.Log("Press T");
+                // Debug.Log("Press T");
                 if(Input.GetKeyDown("t"))
                 {
-                    Debug.Log("key pressed");
+                    // Debug.Log("key pressed");
                     for(int i = 0; i < incSlots.Count; i++)
                     {
-                        Debug.Log("recursive process");
+                        // Debug.Log("recursive process");
                         if(incSlots[i].transform.childCount > 0)
                         {
                             GameObject firstBag = incSlots[i].transform.GetChild(0).gameObject;
@@ -91,7 +91,7 @@ public class SubstrateToIncubator : MonoBehaviour
         {
             shroomName = other.name;
             shroom.StopMushroom(shroomName);
-
+            other.tag = "Cooked";
             bagReady = false;
         }
 
