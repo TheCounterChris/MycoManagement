@@ -72,7 +72,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Stencil: 0
-    - _StencilComp: 8
+    - _StencilComp: 6.18
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
@@ -80,6 +80,6 @@ Material:
     - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 0.23137255}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.23137255}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Specular: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0.29411766}
+    - _Specular: {r: 1, g: 1, b: 1, a: 0.29411766}

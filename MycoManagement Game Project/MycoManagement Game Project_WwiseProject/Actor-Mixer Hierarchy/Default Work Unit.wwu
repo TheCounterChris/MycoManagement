@@ -1017,6 +1017,62 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<ActorMixer Name="Substrate Accept" ID="{42D39E69-7107-4F41-9191-D87F6223F342}" ShortID="489721358">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SubstrateAccept" ID="{CC6FF2A5-3936-4151-820E-1323ABA97AF4}" ShortID="271714017">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SubstrateAccept" ID="{2148256F-31DC-4203-890E-FCB3F7CEFC92}">
+											<Language>SFX</Language>
+											<AudioFile>SubstrateAccept.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="562071755"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SubstrateAccept" ID="{2148256F-31DC-4203-890E-FCB3F7CEFC92}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SubstrateAccept_WithBlip" ID="{296FF1FF-F557-4A98-9E7C-A631739E5DBB}" ShortID="391861323">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SubstrateAccept_WithBlip" ID="{921A5C07-1044-4D3D-9BDA-662AE2CAA58D}">
+											<Language>SFX</Language>
+											<AudioFile>SubstrateAccept_WithBlip.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="159162667"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SubstrateAccept_WithBlip" ID="{921A5C07-1044-4D3D-9BDA-662AE2CAA58D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Music" ID="{E9D720EB-B8C5-407B-BBD3-66CC6B1E4744}" ShortID="565536520">
