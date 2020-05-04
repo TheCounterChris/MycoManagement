@@ -22,6 +22,7 @@ public class MushroomManager2 : MonoBehaviour
 
     float idealHumidity = 90f;
     float growthModifer = 1f;
+
     public List<float> mushGrowth = new List<float>();
     // public List<float> potency = new List<float>();
     // public float potency = 1;
@@ -74,7 +75,8 @@ public class MushroomManager2 : MonoBehaviour
                     // // stage = Mathf.Clamp(stage, 0, 5);
                     // // Checks if this stage is earlier then the mushroom stage
                     // Debug.Log("Mushroom Name -----------" + m.Name);
-                    // Debug.Log("Mushroom Growth -----------" + mushGrowth[mushrooms.IndexOf(m)]);
+                    // Debug.Log("Mushroom Growth -----------" + mushGrowth[mushrooms.IndexOf(m)]); 
+
                     switch ((int)mushGrowth[mushrooms.IndexOf(m)])
                     {
                         case 0:
@@ -86,7 +88,6 @@ public class MushroomManager2 : MonoBehaviour
                             {
                                 ChangeMushModel(cordySpore, cordyBud);
                             }
-
                             if (m.Name == "Lionsmane")
                             {
                                 ChangeMushModel(lionSpore, lionBud);
@@ -105,11 +106,11 @@ public class MushroomManager2 : MonoBehaviour
                             if (m.Name == "Lionsmane")
                             {
                                 ChangeMushModel(lionBud, lionMed);
-                            }               
+                            }
                             if (m.Name == "Matsutake")
                             {
                                 ChangeMushModel(matBud, matMed);
-                            }             
+                            }
                             break;
                         case 30:
                             m.stage = MushroomStage.full;
@@ -124,7 +125,6 @@ public class MushroomManager2 : MonoBehaviour
                         default:
                             break;
                     }
-
                     // Debug.Log(m.stage);
 
                 }
@@ -134,10 +134,13 @@ public class MushroomManager2 : MonoBehaviour
 
     public void ChangeMushModel(GameObject oldModel, GameObject newModel)
     {
+        if (oldModel.active == true)
+        {
+            AkSoundEngine.PostEvent("ShroomGrowth", oldModel);
+        }
         oldModel.SetActive(false);
         newModel.SetActive(true);
     }
-
 
     public void AddMushroom(string name)
     {
