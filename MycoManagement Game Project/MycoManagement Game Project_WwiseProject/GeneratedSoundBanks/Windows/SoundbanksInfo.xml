@@ -16,20 +16,166 @@
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3978245845" Name="PickUp" ObjectPath="\Events\Default Work Unit\PickUp" DurationType="OneShot" DurationMin="0.268231" DurationMax="0.268231">
+				<Event Id="820567678" Name="GameMusicLoop" ObjectPath="\Events\Default Work Unit\GameMusicLoop" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="357254741" Language="SFX">
-							<ShortName>srattle3___m.wav</ShortName>
-							<Path>SFX\srattle3___m_10C4C929.wem</Path>
+						<File Id="453542826" Language="SFX">
+							<ShortName>MycoManagement_GameMusicLoop.wav</ShortName>
+							<Path>SFX\MycoManagement_GameMusicLoop_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3257506471" Name="Impact" ObjectPath="\Events\Default Work Unit\Impact" DurationType="OneShot" DurationMin="1.313079" DurationMax="1.392766">
+					<IncludedMemoryFiles>
+						<File Id="202206294" Language="SFX">
+							<ShortName>Collision3.wav</ShortName>
+							<Path>SFX\Collision3_10C4C929.wem</Path>
+						</File>
+						<File Id="850982311" Language="SFX">
+							<ShortName>Collision2.wav</ShortName>
+							<Path>SFX\Collision2_10C4C929.wem</Path>
+						</File>
+						<File Id="1008374548" Language="SFX">
+							<ShortName>Collision1.wav</ShortName>
+							<Path>SFX\Collision1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3978245845" Name="PickUp" ObjectPath="\Events\Default Work Unit\PickUp" DurationType="OneShot" DurationMin="1.264422" DurationMax="1.264422">
+					<IncludedMemoryFiles>
+						<File Id="145869733" Language="SFX">
+							<ShortName>ScissorSnips - 1.wav</ShortName>
+							<Path>SFX\ScissorSnips - 1_10C4C929.wem</Path>
+						</File>
+						<File Id="1029773829" Language="SFX">
+							<ShortName>ScissorSnips - 2.wav</ShortName>
+							<Path>SFX\ScissorSnips - 2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2997160352" Name="ShroomGrowth" ObjectPath="\Events\Default Work Unit\ShroomGrowth" DurationType="OneShot" DurationMin="40.680195" DurationMax="53.677841"/>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="1517852" Language="SFX">
+					<ShortName>Mushroom Interaction-003.wav</ShortName>
+					<Path>SFX\Mushroom Interaction-003_10C4C929.wem</Path>
+				</File>
+				<File Id="51164753" Language="SFX">
+					<ShortName>FUNGMiscMovement-007.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-007_10C4C929.wem</Path>
+				</File>
+				<File Id="97530045" Language="SFX">
+					<ShortName>Mushroom Growth-006.wav</ShortName>
+					<Path>SFX\Mushroom Growth-006_10C4C929.wem</Path>
+				</File>
+				<File Id="115924959" Language="SFX">
+					<ShortName>Mushroom Growth-004.wav</ShortName>
+					<Path>SFX\Mushroom Growth-004_10C4C929.wem</Path>
+				</File>
+				<File Id="145869733" Language="SFX">
+					<ShortName>ScissorSnips - 1.wav</ShortName>
+					<Path>SFX\ScissorSnips - 1_10C4C929.wem</Path>
+				</File>
+				<File Id="168102941" Language="SFX">
+					<ShortName>Mushroom Growth-002.wav</ShortName>
+					<Path>SFX\Mushroom Growth-002_10C4C929.wem</Path>
+				</File>
+				<File Id="185348440" Language="SFX">
+					<ShortName>Mushroom Growth-003.wav</ShortName>
+					<Path>SFX\Mushroom Growth-003_10C4C929.wem</Path>
+				</File>
+				<File Id="202206294" Language="SFX">
+					<ShortName>Collision3.wav</ShortName>
+					<Path>SFX\Collision3_10C4C929.wem</Path>
+				</File>
+				<File Id="225050575" Language="SFX">
+					<ShortName>Mushroom Interaction-001.wav</ShortName>
+					<Path>SFX\Mushroom Interaction-001_10C4C929.wem</Path>
+				</File>
+				<File Id="252063922" Language="SFX">
+					<ShortName>Mushroom Growth-005.wav</ShortName>
+					<Path>SFX\Mushroom Growth-005_10C4C929.wem</Path>
+				</File>
+				<File Id="274477245" Language="SFX">
+					<ShortName>UI Blip 1.wav</ShortName>
+					<Path>SFX\UI Blip 1_10C4C929.wem</Path>
+				</File>
+				<File Id="354166232" Language="SFX">
+					<ShortName>FUNGMiscMovement-005.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-005_10C4C929.wem</Path>
+				</File>
+				<File Id="491241249" Language="SFX">
+					<ShortName>Mushroom Growth-001.wav</ShortName>
+					<Path>SFX\Mushroom Growth-001_10C4C929.wem</Path>
+				</File>
+				<File Id="533128467" Language="SFX">
+					<ShortName>Mushroom Interaction-002.wav</ShortName>
+					<Path>SFX\Mushroom Interaction-002_10C4C929.wem</Path>
+				</File>
+				<File Id="570165901" Language="SFX">
+					<ShortName>UI Blip 3.wav</ShortName>
+					<Path>SFX\UI Blip 3_10C4C929.wem</Path>
+				</File>
+				<File Id="609291676" Language="SFX">
+					<ShortName>FUNGMiscMovement-009.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-009_10C4C929.wem</Path>
+				</File>
+				<File Id="619626092" Language="SFX">
+					<ShortName>UI Blip 2.wav</ShortName>
+					<Path>SFX\UI Blip 2_10C4C929.wem</Path>
+				</File>
+				<File Id="753446570" Language="SFX">
+					<ShortName>FUNGMiscMovement-003.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-003_10C4C929.wem</Path>
+				</File>
+				<File Id="833515079" Language="SFX">
+					<ShortName>FUNGMiscMovement-001.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-001_10C4C929.wem</Path>
+				</File>
+				<File Id="850982311" Language="SFX">
+					<ShortName>Collision2.wav</ShortName>
+					<Path>SFX\Collision2_10C4C929.wem</Path>
+				</File>
+				<File Id="862303114" Language="SFX">
+					<ShortName>FUNGMiscMovement-006.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-006_10C4C929.wem</Path>
+				</File>
+				<File Id="876267306" Language="SFX">
+					<ShortName>FUNGMiscMovement-011.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-011_10C4C929.wem</Path>
+				</File>
+				<File Id="945147908" Language="SFX">
+					<ShortName>FUNGMiscMovement-002.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-002_10C4C929.wem</Path>
+				</File>
+				<File Id="972560589" Language="SFX">
+					<ShortName>FUNGMiscMovement-010.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-010_10C4C929.wem</Path>
+				</File>
+				<File Id="1008374548" Language="SFX">
+					<ShortName>Collision1.wav</ShortName>
+					<Path>SFX\Collision1_10C4C929.wem</Path>
+				</File>
+				<File Id="1012107228" Language="SFX">
+					<ShortName>FUNGMiscMovement-004.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-004_10C4C929.wem</Path>
+				</File>
+				<File Id="1021959737" Language="SFX">
+					<ShortName>FUNGMiscMovement-008.wav</ShortName>
+					<Path>SFX\FUNGMiscMovement-008_10C4C929.wem</Path>
+				</File>
+				<File Id="1029773829" Language="SFX">
+					<ShortName>ScissorSnips - 2.wav</ShortName>
+					<Path>SFX\ScissorSnips - 2_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="3637567782" Name="RVB_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\RVB\RVB_Bus"/>
+			</IncludedAuxBusses>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
