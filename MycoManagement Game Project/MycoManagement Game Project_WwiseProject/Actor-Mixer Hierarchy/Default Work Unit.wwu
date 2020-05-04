@@ -551,6 +551,155 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="MushroomCutting_RandomContainer" ID="{CA44D642-0AE2-46D2-BC37-327A3ACABA14}" ShortID="136114528">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="ScissorSnips - 1" ID="{092739F9-6852-452F-9FE9-671850D4B78A}" ShortID="754329570">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="ScissorSnips - 1" ID="{751564EF-7E90-4486-AD3F-6A5138F31BCE}">
+															<Language>SFX</Language>
+															<AudioFile>ScissorSnips - 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="145869733"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="ScissorSnips - 1" ID="{751564EF-7E90-4486-AD3F-6A5138F31BCE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="ScissorSnips - 2" ID="{1EE58A5D-31F2-48D4-9077-EF51DCCD595C}" ShortID="59025333">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="ScissorSnips - 2" ID="{91A78B90-C2CE-4FFA-8196-E258B4930187}">
+															<Language>SFX</Language>
+															<AudioFile>ScissorSnips - 2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1029773829"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="ScissorSnips - 2" ID="{91A78B90-C2CE-4FFA-8196-E258B4930187}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="Collisions" ID="{46F501DA-86F5-4143-B1F1-832CD1058A10}" ShortID="1036450157">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Collisions_RandomContainer" ID="{A410BFDA-A851-4491-9854-09134E960D12}" ShortID="155520214">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Collision1" ID="{88CE2E37-5129-4577-991A-7A57423BF149}" ShortID="960266454">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Collision1" ID="{339A80E4-BF01-429F-8554-639D371A4285}">
+															<Language>SFX</Language>
+															<AudioFile>Collision1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1008374548"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Collision1" ID="{339A80E4-BF01-429F-8554-639D371A4285}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Collision2" ID="{BCCE6D77-9F05-4B99-9F99-1311B07586BB}" ShortID="264527878">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Collision2" ID="{F27F7F87-9C16-4200-8021-1E9AA4AC5E0C}">
+															<Language>SFX</Language>
+															<AudioFile>Collision2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="850982311"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Collision2" ID="{F27F7F87-9C16-4200-8021-1E9AA4AC5E0C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Collision3" ID="{BBD258FF-91A6-4D1A-9D64-1D2EFE27B3C6}" ShortID="305283265">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Collision3" ID="{7624C8CF-F851-4415-A94E-4F3D80A4D520}">
+															<Language>SFX</Language>
+															<AudioFile>Collision3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="202206294"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Collision3" ID="{7624C8CF-F851-4415-A94E-4F3D80A4D520}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
 									</ChildrenList>
 								</ActorMixer>
 							</ChildrenList>
@@ -834,6 +983,40 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<ActorMixer Name="Temp Control" ID="{77713630-9F7E-4EBD-AC41-DA71C791251F}" ShortID="12577042">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="TempControlBlip" ID="{7AFE3BD3-A0B8-4899-82F9-3EDBADC87F22}" ShortID="276924903">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FB1C7A2B-EFF4-47E0-A4C9-169F03C498C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="TempControlBlip" ID="{313F6586-6A38-4A51-82C9-F4BCF34FAB55}">
+											<Language>SFX</Language>
+											<AudioFile>TempControlBlip.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="609931538"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="TempControlBlip" ID="{313F6586-6A38-4A51-82C9-F4BCF34FAB55}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Music" ID="{E9D720EB-B8C5-407B-BBD3-66CC6B1E4744}" ShortID="565536520">
@@ -856,7 +1039,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="PlaceholderMusic_CheesyChiptunes" ID="{29579645-B728-4FD4-B49B-D4E981E5DF28}" ShortID="771300943">
+								<Sound Name="MycoManagement_GameMusicLoop" ID="{83CAB43A-1272-452E-82CF-5A2C23EDC913}" ShortID="493557329">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 									</PropertyList>
@@ -869,16 +1052,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="PlaceholderMusic_CheesyChiptunes" ID="{16ABB5B4-FF00-44F9-892D-7DB81AB1658A}">
+										<AudioFileSource Name="MycoManagement_GameMusicLoop" ID="{314DFDB7-4891-4A3F-B4B4-9CFABF7B718B}">
 											<Language>SFX</Language>
-											<AudioFile>PlaceholderMusic_CheesyChiptunes.wav</AudioFile>
+											<AudioFile>MycoManagement_GameMusicLoop.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="217415080"/>
+												<MediaID ID="453542826"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="PlaceholderMusic_CheesyChiptunes" ID="{16ABB5B4-FF00-44F9-892D-7DB81AB1658A}" Platform="Linked"/>
+										<ActiveSource Name="MycoManagement_GameMusicLoop" ID="{314DFDB7-4891-4A3F-B4B4-9CFABF7B718B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
