@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2b7a1cfbf4efe047a4c9169f03c498c9
     GuidInternal: 
-    m_lastTime: -8586131658287083441
+    m_lastTime: -8586130082526272865
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a94c132458f1b342979151e6287bf2eb
     GuidInternal: 
-    m_lastTime: -8586130944383172245
+    m_lastTime: -8586130046304673534
     List:
     - name: SFX
       guid: bef06a5e3b69de4aa18a5e1227ceb69d
@@ -56,10 +56,34 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 8b72dd817d40004eb9613137cbcae8f7
     GuidInternal: 
-    m_lastTime: -8586130950469595796
+    m_lastTime: -8586130046304803185
     List:
+    - name: GameMusicLoop
+      guid: 5ad39b17936f184097e08a62b97fc887
+      id: 820567678
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameMusicLoop
+        ObjectType: 3
+      Path: Default Work Unit\GameMusicLoop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Impact
+      guid: a0bc46f985b1b34892f3db60c75790cf
+      id: 3257506471
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Impact
+        ObjectType: 3
+      Path: Default Work Unit\Impact
+      maxAttenuation: 0
+      maxDuration: 1.392766
+      minDuration: 1.313079
     - name: PickUp
-      guid: b364ba94dd45b74680549a7686a18545
+      guid: 7a1b1264fdc82d4aa1d656f72aaef86e
       id: 3978245845
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -68,8 +92,20 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\PickUp
       maxAttenuation: 0
-      maxDuration: 0.268231
-      minDuration: 0.268231
+      maxDuration: 1.264422
+      minDuration: 1.264422
+    - name: ShroomGrowth
+      guid: 43e8424ca6c4204f8b0f7331edea7f84
+      id: 2997160352
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ShroomGrowth
+        ObjectType: 3
+      Path: Default Work Unit\ShroomGrowth
+      maxAttenuation: 0
+      maxDuration: 53.67784
+      minDuration: 40.680195
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit

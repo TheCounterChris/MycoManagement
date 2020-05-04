@@ -378,13 +378,6 @@
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Interactions" ID="{D97CAB66-9853-45F1-A2E5-06BAA018E242}" ShortID="679882255">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-14</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7C321F9C-8D80-4623-ABA6-08AA235FC13A}"/>
@@ -481,6 +474,11 @@
 														<Value>-9</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-24</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -555,9 +553,14 @@
 										<RandomSequenceContainer Name="Collisions_RandomContainer" ID="{A410BFDA-A851-4491-9854-09134E960D12}" ShortID="155520214">
 											<PropertyList>
 												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-23</Value>
+														<Value>-39</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -627,7 +630,7 @@
 														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
-																<Value>29</Value>
+																<Value>22</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -701,7 +704,7 @@
 														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
-																<Value>80</Value>
+																<Value>90</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -789,7 +792,7 @@
 														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
-																<Value>37</Value>
+																<Value>27</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -854,7 +857,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-16</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1185,6 +1188,7 @@
 								<Sound Name="MycoManagement_GameMusicLoop" ID="{83CAB43A-1272-452E-82CF-5A2C23EDC913}" ShortID="493557329">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>

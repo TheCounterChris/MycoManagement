@@ -3,12 +3,45 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{81DD728B-407D-4E00-B961-3137CBCAE8F7}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="PickUp" ID="{94BA64B3-45DD-46B7-8054-9A7686A18545}">
+				<Event Name="ShroomGrowth" ID="{4C42E843-C4A6-4F20-8B0F-7331EDEA7F84}">
 					<ChildrenList>
-						<Action Name="" ID="{9087E21D-74D8-4006-8A0C-5E0319B8F510}" ShortID="300980460">
+						<Action Name="" ID="{9F6E5708-D011-4601-9B49-440E423176C5}" ShortID="203127878">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="srattle3___m" ID="{015ACFB5-81CF-4071-9532-0B905BA9F433}" WorkUnitID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}"/>
+									<ObjectRef Name="MushroomGrowth_RandomContainer" ID="{7C61F6DD-DC91-430B-B140-A060F09AC87C}" WorkUnitID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PickUp" ID="{64121B7A-C8FD-4A2D-A1D6-56F72AAEF86E}">
+					<ChildrenList>
+						<Action Name="" ID="{AD966779-B6E2-4A5E-9AF0-D9883EB75833}" ShortID="615787417">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MushroomCutting_RandomContainer" ID="{CA44D642-0AE2-46D2-BC37-327A3ACABA14}" WorkUnitID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GameMusicLoop" ID="{179BD35A-6F93-4018-97E0-8A62B97FC887}">
+					<ChildrenList>
+						<Action Name="" ID="{CFE31F81-F3C3-49E6-B4CC-85B880146635}" ShortID="602602988">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MycoManagement_GameMusicLoop" ID="{83CAB43A-1272-452E-82CF-5A2C23EDC913}" WorkUnitID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Impact" ID="{BF94CD49-C1F5-42D7-9A80-C653BD1900BE}">
+					<ChildrenList>
+						<Action Name="" ID="{583610A1-B57F-4AC4-818A-90E56199A4D0}" ShortID="38626830">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Collisions_RandomContainer" ID="{A410BFDA-A851-4491-9854-09134E960D12}" WorkUnitID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

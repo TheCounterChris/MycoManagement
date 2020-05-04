@@ -4,20 +4,14 @@
 		<WorkUnit Name="Default Work Unit" ID="{24134CA9-F158-42B3-9791-51E6287BF2EB}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="SFX" ID="{5E6AF0BE-693B-4ADE-A18A-5E1227CEB69D}">
-					<PropertyList>
-						<Property Name="Maximum" Type="int32">
-							<ValueList>
-								<Value>100000</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ObjectInclusionList>
-						<ObjectRef Name="GameMusicLoop" ID="{EB4BD0D5-C366-443D-A91C-826C79EBCBE9}" WorkUnitID="{81DD728B-407D-4E00-B961-3137CBCAE8F7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="GameMusicLoop" ID="{179BD35A-6F93-4018-97E0-8A62B97FC887}" WorkUnitID="{81DD728B-407D-4E00-B961-3137CBCAE8F7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Impact" ID="{BF94CD49-C1F5-42D7-9A80-C653BD1900BE}" WorkUnitID="{81DD728B-407D-4E00-B961-3137CBCAE8F7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI" ID="{FA920578-D04D-4486-8F62-D826C93D39F3}" WorkUnitID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Mushrooms" ID="{A8DABD64-A8F0-46A0-89DB-9B43D442B086}" WorkUnitID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="FUN-G" ID="{4DC2BD91-4585-4823-BBD8-89A403495AF1}" WorkUnitID="{3DE1778B-7494-4E16-AC63-EB35570DC69E}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Impact" ID="{F946BCA0-B185-48B3-92F3-DB60C75790CF}" WorkUnitID="{81DD728B-407D-4E00-B961-3137CBCAE8F7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PickUp" ID="{64121B7A-C8FD-4A2D-A1D6-56F72AAEF86E}" WorkUnitID="{81DD728B-407D-4E00-B961-3137CBCAE8F7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ShroomGrowth" ID="{4C42E843-C4A6-4F20-8B0F-7331EDEA7F84}" WorkUnitID="{81DD728B-407D-4E00-B961-3137CBCAE8F7}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
